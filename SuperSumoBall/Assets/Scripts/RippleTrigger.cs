@@ -53,7 +53,8 @@ namespace Assets.Scripts
                 vertexIndices[(int)position] = i;
             }
 
-            splashAtPoint(cols / 2, rows / 2);
+            // trigger ripple at center
+            //splashAtPoint(cols / 2, rows / 2);
         }
 
         void splashAtPoint(int x, int y)
@@ -118,9 +119,6 @@ namespace Assets.Scripts
                 RaycastHit hit;
                 if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
                 {
-                    Debug.Log(hit.textureCoord.x);
-                    Debug.Log(hit.textureCoord.y);
-
                     // getting the inverse of the coordinates for an accurate hit location
                     var xTextureCoord = 1- hit.textureCoord.x;
                     var yTextureCoord = 1 - hit.textureCoord.y;
