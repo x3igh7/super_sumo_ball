@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player2Controller : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
 
     //Check every frame for player input
@@ -10,7 +10,12 @@ public class Player2Controller : MonoBehaviour
     private Rigidbody rb;
     public float speed;  //should show up in the inspector
     public float jumpForce; //should show up in the inspector
-    private Vector3 startPosition;  //save the starting position of the player
+    public string jumpButton;
+    public string horizontalButton;
+    public string verticalButton;
+    public AudioSource footSteps;
+    public AudioSource impacts;
+    private Vector3 startPosition; //save the starting position of the player
 
     //Called on the first frame the script is active, often first frame of game
     void Start()
@@ -21,30 +26,47 @@ public class Player2Controller : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump2"))
+        if(jumpButton == null)
         {
-                Jump();
+            return;
         }
-
+        if (Input.GetButtonDown(jumpButton))
+        {
+            Jump();
+        }
     }
 
     public void Jump()
     {
-        if (GetComponent<Rigidbody>().position.y == startPosition.y)
+        if(GetComponent<Rigidbody>().position.y <= startPosition.y)
         {
+            impacts.Play();
             Vector3 up = Vector3.up;
             rb.AddForce(up * jumpForce, ForceMode.Impulse);
         }
-
+        
     }
 
     private void FixedUpdate()  //called before applying physics, movement code
     {
-        float moveHorizontal = Input.GetAxis("Horizontal2");
-        float moveVertical = Input.GetAxis("Vertical2");
-
+        float moveHorizontal = Input.GetAxis(horizontalButton);
+        float moveVertical = Input.GetAxis(verticalButton);
+        if(moveHorizontal != 0 || moveVertical != 0)
+        {
+            if (!footSteps.isPlaying)
+            {
+                footSteps.Play();
+            }
+        }
+        else
+        {
+            if (footSteps.isPlaying)
+            {
+                footSteps.Stop();
+            }
+        }
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);  //determine force added to ball
 
         rb.AddForce(movement * speed);
-    }
+    }    
 }
