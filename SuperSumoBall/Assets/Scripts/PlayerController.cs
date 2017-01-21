@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
         float moveVertical = Input.GetAxis(verticalButton);
         if( Mathf.Abs(moveHorizontal) > .75 || Mathf.Abs(moveVertical) > .75)
         {
-            print("horiz = " + moveHorizontal + " and vert = " + moveVertical);
+            //print("horiz = " + moveHorizontal + " and vert = " + moveVertical);
             if (footSteps != null && !footSteps.isPlaying)
             {
                 footSteps.Play();
