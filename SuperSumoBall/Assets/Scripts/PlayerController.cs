@@ -13,13 +13,17 @@ public class PlayerController : MonoBehaviour
     public string jumpButton;
     public string horizontalButton;
     public string verticalButton;
-    public AudioSource footSteps;
-    public AudioSource impacts;
+    private AudioSource footSteps;
+    private AudioSource impacts;
     private Vector3 startPosition; //save the starting position of the player
 
     //Called on the first frame the script is active, often first frame of game
     void Start()
     {
+        footSteps = gameObject.AddComponent<AudioSource>();
+        footSteps.clip = Resources.Load<AudioClip>("Sounds/Footsteps");
+        impacts = gameObject.AddComponent<AudioSource>();
+        impacts.clip = Resources.Load<AudioClip>("Sounds/BallLanding");
         rb = GetComponent<Rigidbody>();
         startPosition = GetComponent<Rigidbody>().position;
     }
@@ -40,7 +44,7 @@ public class PlayerController : MonoBehaviour
     {
         if(GetComponent<Rigidbody>().position.y <= startPosition.y)
         {
-            impacts.Play();
+            if (impacts != null) { impacts.Play(); }
             Vector3 up = Vector3.up;
             rb.AddForce(up * jumpForce, ForceMode.Impulse);
         }
@@ -53,14 +57,14 @@ public class PlayerController : MonoBehaviour
         float moveVertical = Input.GetAxis(verticalButton);
         if(moveHorizontal != 0 || moveVertical != 0)
         {
-            if (!footSteps.isPlaying)
+            if (footSteps != null && !footSteps.isPlaying)
             {
                 footSteps.Play();
             }
         }
         else
         {
-            if (footSteps.isPlaying)
+            if (footSteps != null && footSteps.isPlaying)
             {
                 footSteps.Stop();
             }
