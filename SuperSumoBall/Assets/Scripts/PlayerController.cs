@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        if(GetComponent<Rigidbody>().position.y <= startPosition.y)
+        if(GetComponent<Rigidbody>().position.y <= startPosition.y + 1)
         {
             if (impacts != null) { impacts.Play(); }
             Vector3 up = Vector3.up;
@@ -55,8 +55,9 @@ public class PlayerController : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis(horizontalButton);
         float moveVertical = Input.GetAxis(verticalButton);
-        if(moveHorizontal != 0 || moveVertical != 0)
+        if( Mathf.Abs(moveHorizontal) > .75 || Mathf.Abs(moveVertical) > .75)
         {
+            print("horiz = " + moveHorizontal + " and vert = " + moveVertical);
             if (footSteps != null && !footSteps.isPlaying)
             {
                 footSteps.Play();
