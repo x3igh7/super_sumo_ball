@@ -73,8 +73,6 @@ namespace Assets.Scripts
 
         private void Update()
         {
-            checkInput();
-
             int[] currentBuffer;
 
             // need to maintain two buffers. one trackers where the ripple was
@@ -112,16 +110,34 @@ namespace Assets.Scripts
             collider.sharedMesh = null;
             collider.sharedMesh = mesh;
         }
-        void checkInput()
+
+        private void OnCollisionEnter(Collision collision)
         {
-            if (Input.GetMouseButton(0))
+            if (collision.gameObject.tag == "Player" && collision.relativeVelocity.magnitude > 6.0f)
             {
-                RaycastHit hit;
-                if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
+                Debug.Log("Magnitude:" + collision.relativeVelocity.magnitude);
+                checkCollision(collision);
+            }
+        }
+
+        void checkCollision(Collision collision)
+        {
+            var contact = collision.contacts[0];
+            RaycastHit hit;
+            var origin = new Vector3(0f, 20f);
+            var ray = new Ray(origin, contact.point - origin);
+            if (Physics.Raycast(ray, out hit))
+            { 
+                Debug.Log("Hit!");
+                Debug.Log(hit.collider.gameObject.name);
+                if(hit.collider.gameObject.name == "TestPlane")
                 {
                     // getting the inverse of the coordinates for an accurate hit location
-                    var xTextureCoord = 1- hit.textureCoord.x;
+                    var xTextureCoord = 1 - hit.textureCoord.x;
                     var yTextureCoord = 1 - hit.textureCoord.y;
+
+                    Debug.Log(xTextureCoord);
+                    Debug.Log(yTextureCoord);
 
                     Bounds bounds = mesh.bounds;
                     float xStep = (bounds.max.x - bounds.min.x) / cols;
@@ -134,6 +150,30 @@ namespace Assets.Scripts
                     splashAtPoint((int)column, (int)row);
                 }
             }
+        }
+
+        void checkInput()
+        {
+            //if (Input.GetMouseButton(0))
+            //{
+            //    RaycastHit hit;
+            //    if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
+            //    {
+            //        // getting the inverse of the coordinates for an accurate hit location
+            //        var xTextureCoord = 1- hit.textureCoord.x;
+            //        var yTextureCoord = 1 - hit.textureCoord.y;
+
+            //        Bounds bounds = mesh.bounds;
+            //        float xStep = (bounds.max.x - bounds.min.x) / cols;
+            //        float zStep = (bounds.max.z - bounds.min.z) / rows;
+            //        float xCoord = (bounds.max.x - bounds.min.x) - ((bounds.max.x - bounds.min.x) * xTextureCoord);
+            //        float zCoord = (bounds.max.z - bounds.min.z) - ((bounds.max.z - bounds.min.z) * yTextureCoord);
+            //        float column = (xCoord / xStep);
+            //        float row = (zCoord / zStep);
+
+            //        splashAtPoint((int)column, (int)row);
+            //    }
+            //}
         }
 
         void processRipples(int[] source, int[] dest)
