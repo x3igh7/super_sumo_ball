@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         if (rb.position.y < -15)
         {
             Vector3 resetPos = new Vector3(startPosition.x, startPosition.y, startPosition.z);
-            resetPos.y += 20f;
+            resetPos.y += 10f;
             rb.position = resetPos;
             rb.velocity = new Vector3();
             return;
