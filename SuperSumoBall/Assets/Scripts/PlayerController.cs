@@ -8,8 +8,9 @@ public class PlayerController : MonoBehaviour
     //Check every frame for player input
     //Apply input every frame as movement
     private Rigidbody rb;
-    public float speed;  //should show up in the inspector
-    public float jumpForce; //should show up in the inspector
+    public float speed = 20;  //should show up in the inspector
+    public float jumpForce = 40; //should show up in the inspector
+    public float poundForce = 20; //should show up in the inspector
     public string jumpButton;
     public string horizontalButton;
     public string verticalButton;
@@ -51,11 +52,23 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        if(GetComponent<Rigidbody>().position.y <= startPosition.y + 1)
+        RaycastHit hit;
+        var player = GetComponent<Rigidbody>();
+        var origin = player.position;
+
+        var ray = new Ray(origin, Vector3.down);
+        if (Physics.Raycast(ray, out hit))
         {
-            if (impacts != null) { impacts.Play(); }
-            Vector3 up = Vector3.up;
-            rb.AddForce(up * jumpForce, ForceMode.Impulse);
+            Debug.Log("Player distance: " + hit.distance);
+            if (hit.collider.gameObject.name == "TestPlane" && hit.distance <= 1)
+            {
+                if (impacts != null) { impacts.Play(); }
+                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            } else
+            {
+                rb.velocity = new Vector3();
+                rb.AddForce(Vector3.down * poundForce, ForceMode.Impulse);
+            }
         }
         
     }
