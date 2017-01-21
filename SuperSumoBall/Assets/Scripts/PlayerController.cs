@@ -30,7 +30,16 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if(jumpButton == null)
+        if (rb.position.y < -15)
+        {
+            Vector3 resetPos = new Vector3(startPosition.x, startPosition.y, startPosition.z);
+            resetPos.y += 20f;
+            rb.position = resetPos;
+            rb.velocity = new Vector3();
+            return;
+        }
+
+        if (jumpButton == null)
         {
             return;
         }
