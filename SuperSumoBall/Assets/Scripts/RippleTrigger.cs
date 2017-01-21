@@ -50,7 +50,6 @@ namespace Assets.Scripts
                 float column = ((vertices[i].x - bounds.min.x) / xStep);// + 0.5;
                 float row = ((vertices[i].z - bounds.min.z) / zStep);// + 0.5;
                 float position = (row * (cols + 1)) + column + 0.5f;
-                if (vertexIndices[(int)position] >= 0) print("smash");
                 vertexIndices[(int)position] = i;
             }
 
@@ -76,6 +75,10 @@ namespace Assets.Scripts
             checkInput();
 
             int[] currentBuffer;
+
+            // need to maintain two buffers. one trackers where the ripple was
+            // the other tracks where it needs to be next.
+            // by swapping between the two buffers you can create the ripple effect.
             if (swapMe)
             {
                 // process the ripples for this frame
@@ -87,7 +90,9 @@ namespace Assets.Scripts
                 processRipples(buffer2, buffer1);
                 currentBuffer = buffer1;
             }
+
             swapMe = !swapMe;
+
             // apply the ripples to our buffer
             Vector3[] theseVertices = new Vector3[vertices.Length];
             int vertIndex;
@@ -96,9 +101,15 @@ namespace Assets.Scripts
             {
                 vertIndex = vertexIndices[i];
                 theseVertices[vertIndex] = vertices[vertIndex];
-                theseVertices[vertIndex].y += (currentBuffer[i] * 1.0f / splashForce) * maxWaveHeight;
+                theseVertices[vertIndex].y += ((float)currentBuffer[i] / splashForce) * maxWaveHeight;
             }
+
             mesh.vertices = theseVertices;
+            mesh.RecalculateNormals();
+
+            var collider = GetComponent<MeshCollider>();
+            collider.sharedMesh = null;
+            collider.sharedMesh = mesh;
         }
         void checkInput()
         {
@@ -107,13 +118,21 @@ namespace Assets.Scripts
                 RaycastHit hit;
                 if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
                 {
+                    Debug.Log(hit.textureCoord.x);
+                    Debug.Log(hit.textureCoord.y);
+
+                    // getting the inverse of the coordinates for an accurate hit location
+                    var xTextureCoord = 1- hit.textureCoord.x;
+                    var yTextureCoord = 1 - hit.textureCoord.y;
+
                     Bounds bounds = mesh.bounds;
                     float xStep = (bounds.max.x - bounds.min.x) / cols;
                     float zStep = (bounds.max.z - bounds.min.z) / rows;
-                    float xCoord = (bounds.max.x - bounds.min.x) - ((bounds.max.x - bounds.min.x) * hit.textureCoord.x);
-                    float zCoord = (bounds.max.z - bounds.min.z) - ((bounds.max.z - bounds.min.z) * hit.textureCoord.y);
-                    float column = (xCoord / xStep);// + 0.5;
-                    float row = (zCoord / zStep);// + 0.5;
+                    float xCoord = (bounds.max.x - bounds.min.x) - ((bounds.max.x - bounds.min.x) * xTextureCoord);
+                    float zCoord = (bounds.max.z - bounds.min.z) - ((bounds.max.z - bounds.min.z) * yTextureCoord);
+                    float column = (xCoord / xStep);
+                    float row = (zCoord / zStep);
+
                     splashAtPoint((int)column, (int)row);
                 }
             }
@@ -136,11 +155,6 @@ namespace Assets.Scripts
                     dest[position] = (int)(dest[position] * dampner);
                 }
             }
-        }
-
-        private void createRipple(Vector3 position)
-        {
-            
         }
     }
 }
