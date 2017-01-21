@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player1Controller : MonoBehaviour
+public class Player2Controller : MonoBehaviour
 {
 
     //Check every frame for player input
@@ -10,7 +10,7 @@ public class Player1Controller : MonoBehaviour
     private Rigidbody rb;
     public float speed;  //should show up in the inspector
     public float jumpForce; //should show up in the inspector
-    private Vector3 startPosition; //save the starting position of the player
+    private Vector3 startPosition;  //save the starting position of the player
 
     //Called on the first frame the script is active, often first frame of game
     void Start()
@@ -21,29 +21,30 @@ public class Player1Controller : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump1"))
+        if (Input.GetButtonDown("Jump2"))
         {
-            Jump();
+                Jump();
         }
+
     }
 
     public void Jump()
     {
-        if(GetComponent<Rigidbody>().position.y == startPosition.y)
+        if (GetComponent<Rigidbody>().position.y == startPosition.y)
         {
             Vector3 up = Vector3.up;
             rb.AddForce(up * jumpForce, ForceMode.Impulse);
         }
-        
+
     }
 
     private void FixedUpdate()  //called before applying physics, movement code
     {
-        float moveHorizontal = Input.GetAxis("Horizontal1");
-        float moveVertical = Input.GetAxis("Vertical1");
+        float moveHorizontal = Input.GetAxis("Horizontal2");
+        float moveVertical = Input.GetAxis("Vertical2");
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);  //determine force added to ball
 
         rb.AddForce(movement * speed);
-    }    
+    }
 }
