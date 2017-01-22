@@ -5,8 +5,12 @@ public class LoadPlayers : MonoBehaviour {
     public GameObject player;
     public int numberOfPlayers;
 
+    
+
 	// Use this for initialization
 	void Start () {
+        numberOfPlayers = PlayerPrefs.GetInt("Players");
+
         for (int i = 1; i <= numberOfPlayers; i++)
         {
             var playerInstance = Instantiate(player, GetPlayerVector(i), Quaternion.identity);
