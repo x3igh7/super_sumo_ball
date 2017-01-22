@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 namespace Assets.Scripts
 {
@@ -24,6 +25,7 @@ namespace Assets.Scripts
 
         private void Start()
         {
+
             mesh = GetComponent<MeshFilter>().mesh;
             vertices = mesh.vertices;
 

@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +11,9 @@ namespace Assets.Scripts
 {
     public class GoalBall : MonoBehaviour
     {
+
+        private List<AudioClip> Deaths;
+        private AudioSource DeathSound;
 
         public int CurrentOwner = -1;
         public Text Leaderboard;
@@ -25,6 +28,17 @@ namespace Assets.Scripts
         //Called on the first frame the script is active, often first frame of game
         void Start()
         {
+            Deaths = new List<AudioClip>();
+            DeathSound = gameObject.AddComponent<AudioSource>();
+            DeathSound.volume = .5f;
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Announcer - Hes Makin Waves - (24bit - 48 kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Announcer - Now Thats Good Sumo - (24bit - 48 kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Announcer - Show me sumo a dat - (24bit - 48 kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Announcer - SKOOOL - (24bit - 48 kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Announcer - Slammin - (24bit - 48 kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Announcer - Super Sumo Ball - (24bit - 48 kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Announcer - SUUUUMOOO - (24bit - 48 kHz)"));
+
             playerCount = PlayerPrefs.GetInt("Players");
             TimeLeft = 120;
 
@@ -59,6 +73,7 @@ namespace Assets.Scripts
             {
                 if (CurrentOwner > -1)
                 {
+                    PlayFall();
                     //TODO:  Score one!
                     ScoreList[CurrentOwner] += 3;
                     CurrentOwner = -1;
@@ -143,6 +158,24 @@ namespace Assets.Scripts
             {
                 return "Yellow";
             }
+        }
+
+        private void PlayFall()
+        {
+            if (DeathSound.isPlaying)
+            {
+                return;
+            }
+            
+            float toPlay = Random.Range(0f, 1.0f);
+            if (toPlay < 0.4f)
+            {
+                return;
+            }
+
+            int chosenSound = (int)Random.Range(0f, (float)Deaths.Count);
+            DeathSound.clip = Deaths[chosenSound];
+            DeathSound.Play();
         }
     }
 }

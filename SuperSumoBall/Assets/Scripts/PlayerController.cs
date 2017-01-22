@@ -62,6 +62,18 @@ namespace Assets.Scripts
             Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Death Grunt 1 - (24bit - 48kHz)"));
             Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Death Grunt 2 - (24bit - 48kHz)"));
             Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Death Grunt 3 - (24bit - 48kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Death Grunt 1 - (24bit - 48kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Death Grunt 2 - (24bit - 48kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Death Grunt 3 - (24bit - 48kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Death Grunt 1 - (24bit - 48kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Death Grunt 2 - (24bit - 48kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Death Grunt 3 - (24bit - 48kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Death Grunt 1 - (24bit - 48kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Death Grunt 2 - (24bit - 48kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Death Grunt 3 - (24bit - 48kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Announcer - Careful Its a Long Way Down - (24bit - 48 kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Announcer - Dohyo Think That Hurt - (24bit - 48 kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Sumo Ball - Announcer - Heya Wanna Stay on the Stage - (24bit - 48 kHz)"));
 
             Grunts = new List<AudioClip>();
             GruntSound = gameObject.AddComponent<AudioSource>();
