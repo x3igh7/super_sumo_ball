@@ -15,11 +15,20 @@ namespace Assets.Scripts
         public Text Leaderboard;
         private Rigidbody rb;
         private Vector3 startPosition; //save the starting position of the player
-        public List<int> ScoreList;
+        private List<int> ScoreList;
+        private int playerCount;
 
         //Called on the first frame the script is active, often first frame of game
         void Start()
         {
+            ScoreList = new List<int>();
+            playerCount = PlayerPrefs.GetInt("Players");
+
+            for (int i= 0; i<=playerCount; i++)
+            {
+                ScoreList.Add(0);
+            }
+
             gameObject.GetComponent<Renderer>().material.color = Color.yellow;
 
             rb = GetComponent<Rigidbody>();
