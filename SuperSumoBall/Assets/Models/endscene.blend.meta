@@ -1,0 +1,747 @@
+fileFormatVersion: 2
+guid: 43949ad13c9ecea4fa9316cb749d1563
+timeCreated: 1485110413
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: GAME_OVER__PLAY_AGAIN_
+    100004: Head
+    100006: Hips
+    100008: LeftArm
+    100010: LeftFingerBase
+    100012: LeftFoot
+    100014: LeftForeArm
+    100016: LeftHand
+    100018: LeftHandFinger1
+    100020: LeftLeg
+    100022: LeftShoulder
+    100024: LeftToeBase
+    100026: LeftUpLeg
+    100028: LHipJoint
+    100030: LowerBack
+    100032: LThumb
+    100034: Neck
+    100036: Neck1
+    100038: RHipJoint
+    100040: RightArm
+    100042: RightFingerBase
+    100044: RightFoot
+    100046: RightForeArm
+    100048: RightHand
+    100050: RightHandFinger1
+    100052: RightLeg
+    100054: RightShoulder
+    100056: RightToeBase
+    100058: RightUpLeg
+    100060: RThumb
+    100062: Spine
+    100064: Spine1
+    100066: Sumo_makehuman_mawashi_t
+    100068: Sumo_makehuman_mawashi_t_Eyebrow008
+    100070: Sumo_makehuman_mawashi_t_Eyelashes01
+    100072: Sumo_makehuman_mawashi_t_High-poly
+    100074: Sumo_makehuman_mawashi_t_Male_generic
+    100076: Sumo_makehuman_mawashi_t_Mawashi
+    100078: Sumo_makehuman_mawashi_t_Short04
+    100080: Sumo_makehuman_mawashi_t_Teeth_base
+    100082: Sumo_makehuman_mawashi_t_Tongue01
+    400000: //RootNode
+    400002: GAME_OVER__PLAY_AGAIN_
+    400004: Head
+    400006: Hips
+    400008: LeftArm
+    400010: LeftFingerBase
+    400012: LeftFoot
+    400014: LeftForeArm
+    400016: LeftHand
+    400018: LeftHandFinger1
+    400020: LeftLeg
+    400022: LeftShoulder
+    400024: LeftToeBase
+    400026: LeftUpLeg
+    400028: LHipJoint
+    400030: LowerBack
+    400032: LThumb
+    400034: Neck
+    400036: Neck1
+    400038: RHipJoint
+    400040: RightArm
+    400042: RightFingerBase
+    400044: RightFoot
+    400046: RightForeArm
+    400048: RightHand
+    400050: RightHandFinger1
+    400052: RightLeg
+    400054: RightShoulder
+    400056: RightToeBase
+    400058: RightUpLeg
+    400060: RThumb
+    400062: Spine
+    400064: Spine1
+    400066: Sumo_makehuman_mawashi_t
+    400068: Sumo_makehuman_mawashi_t_Eyebrow008
+    400070: Sumo_makehuman_mawashi_t_Eyelashes01
+    400072: Sumo_makehuman_mawashi_t_High-poly
+    400074: Sumo_makehuman_mawashi_t_Male_generic
+    400076: Sumo_makehuman_mawashi_t_Mawashi
+    400078: Sumo_makehuman_mawashi_t_Short04
+    400080: Sumo_makehuman_mawashi_t_Teeth_base
+    400082: Sumo_makehuman_mawashi_t_Tongue01
+    2300000: GAME_OVER__PLAY_AGAIN_
+    3300000: GAME_OVER__PLAY_AGAIN_
+    4300000: GAME_OVER__PLAY_AGAIN_
+    4300002: Sumo_makehuman_mawashi_t_Mawashi
+    4300004: Sumo_makehuman_mawashi_t_Tongue01
+    4300006: Sumo_makehuman_mawashi_t_Teeth_base
+    4300008: Sumo_makehuman_mawashi_t_Eyelashes01
+    4300010: Sumo_makehuman_mawashi_t_Eyebrow008
+    4300012: Sumo_makehuman_mawashi_t_High-poly
+    4300014: Sumo_makehuman_mawashi_t_Short04
+    4300016: Sumo_makehuman_mawashi_t_Male_generic
+    7400000: Default Take
+    7400002: Sumo13_29
+    7400004: Sumo36_37
+    7400006: Sumo38_03
+    7400008: Sumo42_01
+    7400010: Sumo42_01_knit
+    9500000: //RootNode
+    13700000: Sumo_makehuman_mawashi_t_Eyebrow008
+    13700002: Sumo_makehuman_mawashi_t_Eyelashes01
+    13700004: Sumo_makehuman_mawashi_t_High-poly
+    13700006: Sumo_makehuman_mawashi_t_Male_generic
+    13700008: Sumo_makehuman_mawashi_t_Mawashi
+    13700010: Sumo_makehuman_mawashi_t_Short04
+    13700012: Sumo_makehuman_mawashi_t_Teeth_base
+    13700014: Sumo_makehuman_mawashi_t_Tongue01
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Default Take' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Spine1' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Neck1' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\nClip 'Sumo13_29'
+      has import animation warnings that might lower retargeting quality:\nNote: Activate
+      translation DOF on avatar to improve retargeting quality.\n\t'Spine1' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo36_37' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo38_03' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo42_01' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo42_01_knit' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 836
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GAME_OVER__PLAY_AGAIN_
+        weight: 0
+      - path: Sumo_makehuman_mawashi_t
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LHipJoint
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LHipJoint/LeftUpLeg
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LHipJoint/LeftUpLeg/LeftLeg
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LHipJoint/LeftUpLeg/LeftLeg/LeftFoot
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LHipJoint/LeftUpLeg/LeftLeg/LeftFoot/LeftToeBase
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftFingerBase
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftFingerBase/LeftHandFinger1
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LThumb
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/Neck
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/Neck/Neck1
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/Neck/Neck1/Head
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm/RightForeArm
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightFingerBase
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightFingerBase/RightHandFinger1
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RThumb
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/RHipJoint
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/RHipJoint/RightUpLeg
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/RHipJoint/RightUpLeg/RightLeg
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/RHipJoint/RightUpLeg/RightLeg/RightFoot
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/RHipJoint/RightUpLeg/RightLeg/RightFoot/RightToeBase
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t_Eyebrow008
+        weight: 0
+      - path: Sumo_makehuman_mawashi_t_Eyelashes01
+        weight: 0
+      - path: Sumo_makehuman_mawashi_t_High-poly
+        weight: 0
+      - path: Sumo_makehuman_mawashi_t_Male_generic
+        weight: 0
+      - path: Sumo_makehuman_mawashi_t_Mawashi
+        weight: 0
+      - path: Sumo_makehuman_mawashi_t_Short04
+        weight: 0
+      - path: Sumo_makehuman_mawashi_t_Teeth_base
+        weight: 0
+      - path: Sumo_makehuman_mawashi_t_Tongue01
+        weight: 0
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerBack
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LThumb
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftFingerBase
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftHandFinger1
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RThumb
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightFingerBase
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightHandFinger1
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: endscene(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GAME_OVER__PLAY_AGAIN_
+      parentName: endscene(Clone)
+      position: {x: 69.60951, y: 1390.5188, z: -25.000061}
+      rotation: {x: 0.000000059604645, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sumo_makehuman_mawashi_t
+      parentName: endscene(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hips
+      parentName: Sumo_makehuman_mawashi_t
+      position: {x: -0.028049707, y: -4.212999, z: 28.536438}
+      rotation: {x: 0.64905035, y: -0.5878063, z: -0.38875896, w: -0.28650284}
+      scale: {x: 0.9999997, y: 1, z: 0.99999994}
+    - name: LHipJoint
+      parentName: Hips
+      position: {x: 0.0000025486806, y: -0.00000037811697, z: 0.0000000661239}
+      rotation: {x: 0.65907747, y: -0.62970173, z: -0.32149464, w: 0.25638634}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1.0000001}
+    - name: LeftUpLeg
+      parentName: LHipJoint
+      position: {x: -3.762032, y: 0.00000043213367, z: 0.00000230968}
+      rotation: {x: 0.41905922, y: -0.39789218, z: 0.55938, w: 0.5942771}
+      scale: {x: 0.9999998, y: 1, z: 0.99999994}
+    - name: LeftLeg
+      parentName: LeftUpLeg
+      position: {x: -13.774245, y: 0.0000017285347, z: -0.0000006556511}
+      rotation: {x: -0.020235134, y: -0.33840105, z: 0.0112486025, w: 0.9407172}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: LeftFoot
+      parentName: LeftLeg
+      position: {x: -14.96935, y: 0.00000084377825, z: 0.000000661239}
+      rotation: {x: 0.24044761, y: 0.64369917, z: -0.43650743, w: 0.5807733}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: LeftToeBase
+      parentName: LeftFoot
+      position: {x: -5.0352516, y: 0, z: -0.00000035762787}
+      rotation: {x: 0.35334337, y: 0.048591472, z: -0.21811305, w: 0.90841293}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LowerBack
+      parentName: Hips
+      position: {x: -3.2359614, y: -0.000000022351742, z: -0.0000007972121}
+      rotation: {x: 0.013631454, y: -0.38599765, z: -0.034421124, w: 0.9217566}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Spine
+      parentName: LowerBack
+      position: {x: -4.7947903, y: 0.00000035762787, z: -0.000000055879354}
+      rotation: {x: 0.0010186649, y: 0.23731342, z: -0.017488493, w: 0.9712752}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: Spine1
+      parentName: Spine
+      position: {x: -5.333211, y: 0.00000043213367, z: -0.0000004656613}
+      rotation: {x: 0.015582522, y: -0.31371826, z: 0.008080437, w: 0.9493539}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftShoulder
+      parentName: Spine1
+      position: {x: -4.2355294, y: 0.9144574, z: -0.9688474}
+      rotation: {x: 0.7296233, y: -0.6830551, z: 0.016328497, w: -0.028616471}
+      scale: {x: 0.99999976, y: 1.0000001, z: 0.9999999}
+    - name: LeftArm
+      parentName: LeftShoulder
+      position: {x: -6.6236453, y: -0.0000005364418, z: -0.00000029802322}
+      rotation: {x: -0.13592786, y: 0.016531397, z: 0.044897832, w: 0.98956287}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: LeftForeArm
+      parentName: LeftArm
+      position: {x: -8.851446, y: -0.0000013709068, z: -0.00000023841858}
+      rotation: {x: 0.10408828, y: 0.022695746, z: -0.035816286, w: 0.9936638}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: LeftHand
+      parentName: LeftForeArm
+      position: {x: -8.8074665, y: 0.0000023841858, z: 0.00000016391277}
+      rotation: {x: -0.101428576, y: 0.10133178, z: 0.054221574, w: 0.98818225}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LThumb
+      parentName: LeftHand
+      position: {x: -1.4764352, y: -0.046718597, z: 0.7671943}
+      rotation: {x: -0.014405692, y: 0.2656121, z: 0.4184974, w: 0.8683908}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: LeftFingerBase
+      parentName: LeftHand
+      position: {x: -1.2040849, y: 0.0000009536743, z: 0}
+      rotation: {x: -0.33592734, y: -0.023421753, z: -0.072131716, w: 0.9388297}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandFinger1
+      parentName: LeftFingerBase
+      position: {x: -2.8001785, y: -0.0000021457672, z: 0.0000019073486}
+      rotation: {x: -0.17110676, y: -0.19410908, z: -0.09933536, w: 0.96082085}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Neck
+      parentName: Spine1
+      position: {x: -6.621005, y: 0.0000003799796, z: 0.0000006342307}
+      rotation: {x: -0.016286593, y: -0.020720309, z: -0.05281097, w: 0.9982567}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: Neck1
+      parentName: Neck
+      position: {x: -2.0059469, y: 0.00000018626451, z: 0.0000005620532}
+      rotation: {x: 0.026377574, y: -0.056289252, z: 0.056475762, w: 0.99646693}
+      scale: {x: 1, y: 1, z: 0.9999998}
+    - name: Head
+      parentName: Neck1
+      position: {x: -2.005084, y: 0.00000024586916, z: -0.000002514571}
+      rotation: {x: 0.000000027374618, y: 0.25245044, z: 0.0000018244918, w: 0.9676098}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+    - name: RightShoulder
+      parentName: Spine1
+      position: {x: -4.2355328, y: -0.9133121, z: -0.9699287}
+      rotation: {x: 0.72941864, y: 0.6829068, z: 0.021650903, w: 0.033436954}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: RightArm
+      parentName: RightShoulder
+      position: {x: -6.623594, y: -0.0000027865171, z: -0.0000017285347}
+      rotation: {x: 0.27160177, y: -0.0066222143, z: -0.057804707, w: 0.9606494}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: RightForeArm
+      parentName: RightArm
+      position: {x: -8.8508415, y: 0.0000008940697, z: 0.0000007748604}
+      rotation: {x: -0.112235114, y: 0.026589787, z: 0.036191933, w: 0.9926663}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: RightHand
+      parentName: RightForeArm
+      position: {x: -8.544783, y: -0.00000033900142, z: -0.00000023841858}
+      rotation: {x: 0.1039856, y: 0.10214385, z: -0.056972083, w: 0.987678}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: RThumb
+      parentName: RightHand
+      position: {x: -1.4755938, y: 0.04684472, z: 0.76703954}
+      rotation: {x: 0.014524662, y: 0.26540652, z: -0.41854078, w: 0.86843085}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: RightFingerBase
+      parentName: RightHand
+      position: {x: -1.2031169, y: 0.00000035762787, z: 0.0000023841858}
+      rotation: {x: 0.33599228, y: -0.024778742, z: 0.07353709, w: 0.9386626}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: RightHandFinger1
+      parentName: RightFingerBase
+      position: {x: -2.8001375, y: -0.0000014305115, z: 0.00000071525574}
+      rotation: {x: 0.17109379, y: -0.1940985, z: 0.09932365, w: 0.96082646}
+      scale: {x: 1, y: 0.99999976, z: 1}
+    - name: RHipJoint
+      parentName: Hips
+      position: {x: 0.0000025486806, y: -0.00000037811697, z: 0.0000000661239}
+      rotation: {x: 0.6589177, y: 0.6299466, z: -0.32101426, w: -0.25679675}
+      scale: {x: 0.9999997, y: 0.9999999, z: 1}
+    - name: RightUpLeg
+      parentName: RHipJoint
+      position: {x: -3.7620318, y: 0.00000047683716, z: -0.0000029206276}
+      rotation: {x: -0.5442463, y: -0.26373455, z: -0.6003018, w: 0.5233333}
+      scale: {x: 0.9999998, y: 1, z: 1}
+    - name: RightLeg
+      parentName: RightUpLeg
+      position: {x: -13.7742605, y: 0.0000015497208, z: 0.00000059604645}
+      rotation: {x: 0.030446589, y: -0.33557716, z: -0.02689305, w: 0.9411365}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: RightFoot
+      parentName: RightLeg
+      position: {x: -14.969346, y: 0.0000009685755, z: 0.000000078231096}
+      rotation: {x: -0.19679715, y: 0.6278497, z: 0.51798195, w: 0.546599}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.9999998}
+    - name: RightToeBase
+      parentName: RightFoot
+      position: {x: -5.0352526, y: 0.00000044703484, z: -0.00000011920929}
+      rotation: {x: -0.35201997, y: 0.049907032, z: 0.22545071, w: 0.90706295}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Sumo_makehuman_mawashi_t_Eyebrow008
+      parentName: endscene(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sumo_makehuman_mawashi_t_Eyelashes01
+      parentName: endscene(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sumo_makehuman_mawashi_t_High-poly
+      parentName: endscene(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sumo_makehuman_mawashi_t_Male_generic
+      parentName: endscene(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sumo_makehuman_mawashi_t_Mawashi
+      parentName: endscene(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sumo_makehuman_mawashi_t_Short04
+      parentName: endscene(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sumo_makehuman_mawashi_t_Teeth_base
+      parentName: endscene(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sumo_makehuman_mawashi_t_Tongue01
+      parentName: endscene(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
