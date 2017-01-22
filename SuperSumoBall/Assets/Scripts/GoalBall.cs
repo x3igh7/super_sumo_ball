@@ -5,6 +5,7 @@ using System.Text;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts
 {
@@ -46,9 +47,11 @@ namespace Assets.Scripts
             UpdateTimer();
             if (Mathf.RoundToInt(TimeLeft) == 0)
             {
-                var winningPlayerNum = GetWinner();
+                int winningPlayerNum = GetWinner();
                 print("Player " + winningPlayerNum + "won the game.");
                 // Gameover
+                PlayerPrefs.SetInt("Winner", winningPlayerNum);
+                SceneManager.LoadScene(2);
             }
 
 
