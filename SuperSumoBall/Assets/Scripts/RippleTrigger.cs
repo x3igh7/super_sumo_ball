@@ -103,12 +103,9 @@ namespace Assets.Scripts
             var collisionMagnitude = collision.relativeVelocity.magnitude;
             if (collision.gameObject.tag == "Player" && collisionMagnitude > 6.0f)
             {
-<<<<<<< HEAD
                 //Debug.Log("Magnitude:" + collision.relativeVelocity.magnitude);
-=======
-                Debug.Log("Magnitude:" + collision.relativeVelocity.magnitude);
+                //Debug.Log("Magnitude:" + collision.relativeVelocity.magnitude);
                 forceMultiplier = Mathf.CeilToInt(collisionMagnitude);
->>>>>>> origin/master
                 checkCollision(collision);
             }
         }
@@ -121,24 +118,16 @@ namespace Assets.Scripts
             var ray = new Ray(origin, contact.point - origin);
             if (Physics.Raycast(ray, out hit))
             { 
-<<<<<<< HEAD
                 //Debug.Log("Hit!");
                 //Debug.Log(hit.collider.gameObject.name);
-=======
-                Debug.Log("Hit!");
->>>>>>> origin/master
                 if(hit.collider.gameObject.name == "TestPlane")
                 {
                     // getting the inverse of the coordinates for an accurate hit location
                     var xTextureCoord = 1 - hit.textureCoord.x;
                     var yTextureCoord = 1 - hit.textureCoord.y;
-
-<<<<<<< HEAD
+                    
                     //Debug.Log(xTextureCoord);
                     //Debug.Log(yTextureCoord);
-
-=======
->>>>>>> origin/master
                     Bounds bounds = mesh.bounds;
                     float xStep = (bounds.max.x - bounds.min.x) / cols;
                     float zStep = (bounds.max.z - bounds.min.z) / rows;
