@@ -16,6 +16,7 @@ namespace Assets.Scripts
         private AudioSource impacts;
         private Vector3 startPosition; //save the starting position of the player
         public int PlayerNum = -1;
+        private GameObject Sumo;
 
         //Called on the first frame the script is active, often first frame of game
         void Start()
@@ -26,8 +27,13 @@ namespace Assets.Scripts
             impacts.clip = Resources.Load<AudioClip>("Sounds/BallLanding");
             rb = GetComponent<Rigidbody>();
             startPosition = GetComponent<Rigidbody>().position;
-
+            
             gameObject.GetComponent<Renderer>().material.color = PlayerColor();
+        }
+
+        public void LinkSumo(GameObject sumo)
+        {
+            Sumo = sumo;
         }
 
         private void Update()
@@ -38,16 +44,30 @@ namespace Assets.Scripts
                 resetPos.y += 10f;
                 rb.velocity = new Vector3();
                 rb.position = resetPos;
-
+                if (Sumo != null)
+                {
+                    Sumo.transform.position = rb.position;
+                    Sumo.transform.position += new Vector3(0, -0.75f, 0);
+                }
                 return;
             }
             if (jumpButton == null)
             {
+                if (Sumo != null)
+                {
+                    Sumo.transform.position = rb.position;
+                    Sumo.transform.position += new Vector3(0, -0.75f, 0);
+                }
                 return;
             }
             if (Input.GetButtonDown(jumpButton))
             {
                 Jump();
+            }
+            if (Sumo != null)
+            {
+                Sumo.transform.position = rb.position;
+                Sumo.transform.position += new Vector3(0, -0.75f, 0);
             }
         }
 
@@ -124,6 +144,10 @@ namespace Assets.Scripts
             float moveVertical = Input.GetAxis(verticalButton);
             if (Mathf.Abs(moveHorizontal) > .75 || Mathf.Abs(moveVertical) > .75)
             {
+                if(Sumo != null)
+                {
+                    Sumo.transform.eulerAngles = new Vector3(Sumo.transform.eulerAngles.x, (Mathf.Atan2(moveVertical*-1, moveHorizontal) * Mathf.Rad2Deg)+90, Sumo.transform.eulerAngles.z);
+                }
                 //print("horiz = " + moveHorizontal + " and vert = " + moveVertical);
                 if (footSteps != null && !footSteps.isPlaying)
                 {

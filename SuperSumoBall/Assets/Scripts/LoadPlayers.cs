@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class LoadPlayers : MonoBehaviour {
     public GameObject player;
+    public GameObject sumo;
     private int numberOfPlayers = 1;
 
 	// Use this for initialization
@@ -15,6 +16,8 @@ public class LoadPlayers : MonoBehaviour {
             playerInstance.gameObject.name = "Player" + i;
             MonoBehaviour[] list = playerInstance.gameObject.GetComponents<MonoBehaviour>();
 
+            var sumoInstance = Instantiate(sumo, GetPlayerVector(i), Quaternion.identity);
+
             foreach (var mb in list)
             {
                 if (mb is PlayerController)
@@ -23,6 +26,7 @@ public class LoadPlayers : MonoBehaviour {
                     (mb as PlayerController).jumpButton = "Jump" + i;
                     (mb as PlayerController).horizontalButton = "Horizontal" + i;
                     (mb as PlayerController).verticalButton = "Vertical" + i;
+                    (mb as PlayerController).LinkSumo(sumoInstance);
                 }
             }
         }
