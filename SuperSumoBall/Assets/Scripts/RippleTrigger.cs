@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts
 {
@@ -104,8 +101,6 @@ namespace Assets.Scripts
             var collisionMagnitude = collision.relativeVelocity.magnitude;
             if (collision.gameObject.tag == "Player" && collisionMagnitude > collisionMinimumMagnitude)
             {
-                Debug.Log(collisionMagnitude);
-
                 forceMultiplier = Mathf.CeilToInt(collisionMagnitude);
                 checkCollision(collision);
             }
@@ -124,7 +119,7 @@ namespace Assets.Scripts
                     // getting the inverse of the coordinates for an accurate hit location
                     var xTextureCoord = 1 - hit.textureCoord.x;
                     var yTextureCoord = 1 - hit.textureCoord.y;
-
+                    
                     Bounds bounds = mesh.bounds;
                     float xStep = (bounds.max.x - bounds.min.x) / cols;
                     float zStep = (bounds.max.z - bounds.min.z) / rows;
@@ -152,7 +147,6 @@ namespace Assets.Scripts
             buffer1[position - (cols + 1) + 1] = modifiedBaseSplash;
             buffer1[position - (cols + 1) - 1] = modifiedBaseSplash;
         }
-
 
         void processRipples(int[] source, int[] dest)
         {

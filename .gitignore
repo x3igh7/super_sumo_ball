@@ -31,3 +31,5 @@ SuperSumoBall/sysinfo.txt
 # Builds
 SuperSumoBall/*.apk
 SuperSumoBall/*.unitypackage
+*.suo
+SuperSumoBall/Assets/_Scenes/Game.unity
