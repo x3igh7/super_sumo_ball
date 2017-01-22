@@ -125,7 +125,7 @@ namespace Assets.Scripts
             {
                 if (ScoreList[i] > highScore)
                 {
-                    winner = i + 1;
+                    winner = i;
                     highScore = ScoreList[i];
                 } else if (ScoreList[i] == highScore) {
                     winner = 0;
