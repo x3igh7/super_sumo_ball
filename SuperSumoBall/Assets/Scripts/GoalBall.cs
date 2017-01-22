@@ -47,6 +47,7 @@ namespace Assets.Scripts
             if (Mathf.RoundToInt(TimeLeft) == 0)
             {
                 var winningPlayerNum = GetWinner();
+                print("Player " + winningPlayerNum + "won the game.");
                 // Gameover
             }
 
