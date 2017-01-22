@@ -26,6 +26,7 @@ public class LoadPlayers : MonoBehaviour {
                     (mb as PlayerController).jumpButton = "Jump" + i;
                     (mb as PlayerController).horizontalButton = "Horizontal" + i;
                     (mb as PlayerController).verticalButton = "Vertical" + i;
+                    (mb as PlayerController).dashButton = "Dash" + i;
                     (mb as PlayerController).LinkSumo(sumoInstance);
                 }
             }

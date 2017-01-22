@@ -9,9 +9,16 @@ namespace Assets.Scripts
         public float speed = 20;  //should show up in the inspector
         public float jumpForce = 50; //should show up in the inspector
         public float poundForce = 80; //should show up in the inspector
+        public float dashForce = 50;
         public string jumpButton;
         public string horizontalButton;
         public string verticalButton;
+        public string dashButton;
+        public int DefaultDashDuration = 10;
+        public int DefaultDashCooldown = 25;
+        private int DashDuration;
+        private int DashCooldown;
+        private bool DashInCooldown = false;
         private AudioSource footSteps;
         private AudioSource impacts;
         private Vector3 startPosition; //save the starting position of the player
@@ -27,6 +34,9 @@ namespace Assets.Scripts
             impacts.clip = Resources.Load<AudioClip>("Sounds/BallLanding");
             rb = GetComponent<Rigidbody>();
             startPosition = GetComponent<Rigidbody>().position;
+
+            DashDuration = 0;
+            DashCooldown = DefaultDashCooldown;
             
             gameObject.GetComponent<Renderer>().material.color = PlayerColor();
         }
@@ -37,6 +47,68 @@ namespace Assets.Scripts
         }
 
         private void Update()
+        {
+            HandleDashCooldownAndDuration();
+            HandlePlayerFall();
+            
+            if (jumpButton == null)
+            {
+                if (Sumo != null)
+                {
+                    Sumo.transform.position = rb.position;
+                    Sumo.transform.position += new Vector3(0, -0.75f, 0);
+                }
+                return;
+            }
+            if (Input.GetButtonDown(jumpButton))
+            {
+                Jump();
+            }
+
+            if (Sumo != null)
+            {
+                Sumo.transform.position = rb.position;
+                Sumo.transform.position += new Vector3(0, -0.75f, 0);
+            }
+        }
+
+        public void Jump()
+        {
+            RaycastHit hit;
+            var player = GetComponent<Rigidbody>();
+            var origin = player.position;
+
+            var ray = new Ray(origin, Vector3.down);
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.collider.gameObject.tag == "Surface" && hit.distance <= 1)
+                {
+                    if (impacts != null) { impacts.Play(); }
+                    rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                }
+                else
+                {
+                    rb.velocity = new Vector3();
+                    rb.AddForce(Vector3.down * poundForce, ForceMode.Impulse);
+                }
+            }
+        }
+
+        public void Dash(Vector3 movement, float speed)
+        {
+            Debug.Log("Dash: " + DashDuration);
+            if(DashDuration > 0)
+            {
+                DashDuration -= 1;
+
+                rb.AddForce(movement * (speed + dashForce), ForceMode.Acceleration);
+            } else
+            {
+                rb.AddForce(movement * speed);
+            }
+        }
+
+        private void HandlePlayerFall()
         {
             if (rb.position.y < -15)
             {
@@ -72,45 +144,29 @@ namespace Assets.Scripts
                 }
                 return;
             }
-            if (jumpButton == null)
-            {
-                if (Sumo != null)
-                {
-                    Sumo.transform.position = rb.position;
-                    Sumo.transform.position += new Vector3(0, -0.75f, 0);
-                }
-                return;
-            }
-            if (Input.GetButtonDown(jumpButton))
-            {
-                Jump();
-            }
-            if (Sumo != null)
-            {
-                Sumo.transform.position = rb.position;
-                Sumo.transform.position += new Vector3(0, -0.75f, 0);
-            }
         }
 
-        public void Jump()
+        private void HandleDashCooldownAndDuration()
         {
-            RaycastHit hit;
-            var player = GetComponent<Rigidbody>();
-            var origin = player.position;
-
-            var ray = new Ray(origin, Vector3.down);
-            if (Physics.Raycast(ray, out hit))
+            if(DashInCooldown && DashCooldown > 0)
             {
-                if (hit.collider.gameObject.tag == "Surface" && hit.distance <= 1)
+                DashCooldown -= 1;
+            }
+            else
+            {
+                if (DashDuration == 0 && !DashInCooldown)
                 {
-                    if (impacts != null) { impacts.Play(); }
-                    rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                    DashInCooldown = true;
+                    DashCooldown = DefaultDashCooldown;
+                } else if (DashDuration < DefaultDashDuration) {
+                    DashDuration += 1;
                 }
-                else
-                {
-                    rb.velocity = new Vector3();
-                    rb.AddForce(Vector3.down * poundForce, ForceMode.Impulse);
-                }
+            }
+
+            if (DashCooldown == 0 && DashInCooldown)
+            {
+                DashDuration = DefaultDashDuration;
+                DashInCooldown = false;
             }
         }
 
@@ -184,7 +240,14 @@ namespace Assets.Scripts
             }
             Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);  //determine force added to ball
 
-            rb.AddForce(movement * speed);
+            if (Input.GetButton(dashButton))
+            {
+                Dash(movement, speed);
+            } else
+            {
+                rb.AddForce(movement * speed);
+            }
+
         }
     } 
 }
