@@ -42,9 +42,9 @@ namespace Assets.Scripts
         void Start()
         {
             RunSteps = gameObject.AddComponent<AudioSource>();
-            RunSteps.clip = Resources.Load<AudioClip>("Sounds/Runsteps");
+            RunSteps.clip = Resources.Load<AudioClip>("Sounds/Sumo Ball - Footsteps Loop Fast - (24bit - 48kHz)");
             footSteps = gameObject.AddComponent<AudioSource>();
-            footSteps.clip = Resources.Load<AudioClip>("Sounds/Footsteps");
+            footSteps.clip = Resources.Load<AudioClip>("Sounds/Sumo Ball - Footsteps Loop Slower - (24bit - 48kHz)");
             impacts = gameObject.AddComponent<AudioSource>();
             impacts.clip = Resources.Load<AudioClip>("Sounds/BallLanding");
             rb = GetComponent<Rigidbody>();
@@ -52,40 +52,46 @@ namespace Assets.Scripts
 
             DashDuration = 0;
             DashCooldown = DefaultDashCooldown;
+
             
             gameObject.GetComponent<Renderer>().material.color = PlayerColor();
 
             Deaths = new List<AudioClip>();
             DeathSound = gameObject.AddComponent<AudioSource>();
-            Deaths.Add(Resources.Load<AudioClip>("Sounds/Death1"));
-            Deaths.Add(Resources.Load<AudioClip>("Sounds/Death2"));
-            Deaths.Add(Resources.Load<AudioClip>("Sounds/Death3"));
+            DeathSound.volume = .5f;
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Death Grunt 1 - (24bit - 48kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Death Grunt 2 - (24bit - 48kHz)"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Death Grunt 3 - (24bit - 48kHz)"));
 
             Grunts = new List<AudioClip>();
             GruntSound = gameObject.AddComponent<AudioSource>();
-            Grunts.Add(Resources.Load<AudioClip>("Sounds/Grunt1"));
-            Grunts.Add(Resources.Load<AudioClip>("Sounds/Grunt2"));
-            Grunts.Add(Resources.Load<AudioClip>("Sounds/Grunt3"));
+            GruntSound.volume = .5f;
+            Grunts.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Grunt 1 - (24bit - 48kHz)"));
+            Grunts.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Grunt 2 - (24bit - 48kHz)"));
+            Grunts.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Grunt 3 - (24bit - 48kHz)"));
 
             Jumps = new List<AudioClip>();
             JumpSound = gameObject.AddComponent<AudioSource>();
-            Jumps.Add(Resources.Load<AudioClip>("Sounds/Jump1"));
-            Jumps.Add(Resources.Load<AudioClip>("Sounds/Jump2"));
-            Jumps.Add(Resources.Load<AudioClip>("Sounds/Jump3"));
-            Jumps.Add(Resources.Load<AudioClip>("Sounds/Jump4"));
+            JumpSound.volume = .5f;
+            Jumps.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Jump-Action SFX 1 - (24bit - 48kHz)"));
+            Jumps.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Jump-Action SFX 2 - (24bit - 48kHz)"));
+            Jumps.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Jump-Action SFX 3 - (24bit - 48kHz)"));
+            Jumps.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Jump-Action SFX 4 - (24bit - 48kHz)"));
 
             Slaps = new List<AudioClip>();
             SlapSound = gameObject.AddComponent<AudioSource>();
-            Slaps.Add(Resources.Load<AudioClip>("Sounds/Slap1"));
-            Slaps.Add(Resources.Load<AudioClip>("Sounds/Slap2"));
-            Slaps.Add(Resources.Load<AudioClip>("Sounds/Slap3"));
-            Slaps.Add(Resources.Load<AudioClip>("Sounds/Slap4"));
+            SlapSound.volume = .5f;
+            Slaps.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Slap 1 - (24bit - 48kHz)"));
+            Slaps.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Slap 2 - (24bit - 48kHz)"));
+            Slaps.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Slap 3 - (24bit - 48kHz)"));
+            Slaps.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Slap 4 - (24bit - 48kHz)"));
 
             Thuds = new List<AudioClip>();
             ThudSound = gameObject.AddComponent<AudioSource>();
-            Thuds.Add(Resources.Load<AudioClip>("Sounds/Thud1"));
-            Thuds.Add(Resources.Load<AudioClip>("Sounds/Thud2"));
-            Thuds.Add(Resources.Load<AudioClip>("Sounds/Thud3"));
+            ThudSound.volume = .5f;
+            Thuds.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Thud 1 - (24bit - 48kHz)"));
+            Thuds.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Thud 2 - (24bit - 48kHz)"));
+            Thuds.Add(Resources.Load<AudioClip>("Sounds/Sumo Ball - Thud 3 - (24bit - 48kHz)"));
 
         }
 
@@ -131,11 +137,12 @@ namespace Assets.Scripts
             {
                 if (hit.collider.gameObject.tag == "Surface" && hit.distance <= 1)
                 {
-                    if (impacts != null) { impacts.Play(); }
+                    PlayJumps();
                     rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                 }
                 else
                 {
+                    PlayGrunt();
                     rb.velocity = new Vector3();
                     rb.AddForce(Vector3.down * poundForce, ForceMode.Impulse);
                 }
@@ -158,6 +165,10 @@ namespace Assets.Scripts
 
         private void HandlePlayerFall()
         {
+            if(rb.position.y < -5)
+            {
+                PlayFall();
+            }
             if (rb.position.y < -15)
             {
                 // lose a point for falling off.
@@ -220,6 +231,9 @@ namespace Assets.Scripts
 
         void OnCollisionEnter(Collision other)
         {
+
+            var collisionMagnitude = other.relativeVelocity.magnitude;
+
             MonoBehaviour[] list = other.gameObject.GetComponents<MonoBehaviour>();
             //print("Checking behaviors:" + list.ToString());
             foreach (MonoBehaviour mb in list)
@@ -228,8 +242,16 @@ namespace Assets.Scripts
                 {
                     if ((mb as GoalBall).CurrentOwner != PlayerNum)
                     {
+                        PlaySlap();
                         (mb as GoalBall).CurrentOwner = PlayerNum;
                         other.gameObject.GetComponent<Renderer>().material.color = PlayerColor();
+                    }
+                }
+                if (mb is PlayerController)
+                {
+                    if (collisionMagnitude > 3.0f)
+                    {
+                        PlayThud();
                     }
                 }
             }
@@ -273,11 +295,6 @@ namespace Assets.Scripts
                 {
                     Sumo.transform.eulerAngles = new Vector3(Sumo.transform.eulerAngles.x, (Mathf.Atan2(moveVertical*-1, moveHorizontal) * Mathf.Rad2Deg)+90, Sumo.transform.eulerAngles.z);
                 }
-                //print("horiz = " + moveHorizontal + " and vert = " + moveVertical);
-                if (footSteps != null && !footSteps.isPlaying)
-                {
-                    footSteps.Play();
-                }
             }
             else
             {
@@ -291,9 +308,11 @@ namespace Assets.Scripts
             if (Input.GetButton(dashButton))
             {
                 Dash(movement, speed);
+                PlayChargeLoop();
             } else
             {
                 rb.AddForce(movement * speed);
+                PlayRunLoop();
             }
 
         }
@@ -348,6 +367,10 @@ namespace Assets.Scripts
         }
         private void PlayFall()
         {
+            if (DeathSound.isPlaying)
+            {
+                return;
+            }
             int chosenSound = (int)Random.Range(0f, (float)Deaths.Count);
             DeathSound.clip = Deaths[chosenSound];
             DeathSound.Play();
