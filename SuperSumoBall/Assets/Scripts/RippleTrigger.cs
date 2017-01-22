@@ -115,7 +115,7 @@ namespace Assets.Scripts
         {
             if (collision.gameObject.tag == "Player" && collision.relativeVelocity.magnitude > 6.0f)
             {
-                Debug.Log("Magnitude:" + collision.relativeVelocity.magnitude);
+                //Debug.Log("Magnitude:" + collision.relativeVelocity.magnitude);
                 checkCollision(collision);
             }
         }
@@ -128,16 +128,16 @@ namespace Assets.Scripts
             var ray = new Ray(origin, contact.point - origin);
             if (Physics.Raycast(ray, out hit))
             { 
-                Debug.Log("Hit!");
-                Debug.Log(hit.collider.gameObject.name);
+                //Debug.Log("Hit!");
+                //Debug.Log(hit.collider.gameObject.name);
                 if(hit.collider.gameObject.name == "TestPlane")
                 {
                     // getting the inverse of the coordinates for an accurate hit location
                     var xTextureCoord = 1 - hit.textureCoord.x;
                     var yTextureCoord = 1 - hit.textureCoord.y;
 
-                    Debug.Log(xTextureCoord);
-                    Debug.Log(yTextureCoord);
+                    //Debug.Log(xTextureCoord);
+                    //Debug.Log(yTextureCoord);
 
                     Bounds bounds = mesh.bounds;
                     float xStep = (bounds.max.x - bounds.min.x) / cols;
