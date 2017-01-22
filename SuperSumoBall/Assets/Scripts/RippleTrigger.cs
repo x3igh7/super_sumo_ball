@@ -10,9 +10,8 @@ namespace Assets.Scripts
         private Mesh mesh;
 
         private Vector3[] vertices;
-        public float dampner = 0.925f;
-        public float maxWaveHeight = 10.0f;
-        public float collisionMinimumMagnitude = 10.0f;
+        public float dampner = 0.9f;
+        public float maxWaveHeight = 2.0f;
 
         public int baseSplashForce = 1000;
 
@@ -99,7 +98,7 @@ namespace Assets.Scripts
         private void OnCollisionEnter(Collision collision)
         {
             var collisionMagnitude = collision.relativeVelocity.magnitude;
-            if (collision.gameObject.tag == "Player" && collisionMagnitude > collisionMinimumMagnitude)
+            if (collision.gameObject.tag == "Player" && collisionMagnitude > 6.0f)
             {
                 forceMultiplier = Mathf.CeilToInt(collisionMagnitude);
                 checkCollision(collision);
@@ -114,6 +113,7 @@ namespace Assets.Scripts
             var ray = new Ray(origin, contact.point - origin);
             if (Physics.Raycast(ray, out hit))
             { 
+                Debug.Log("Hit!");
                 if(hit.collider.gameObject.name == "TestPlane")
                 {
                     // getting the inverse of the coordinates for an accurate hit location

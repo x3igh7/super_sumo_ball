@@ -2,8 +2,7 @@
 
 namespace Assets.Scripts
 {
-    public class PlayerController : MonoBehaviour
-    {
+    public class PlayerController : MonoBehaviour { 
         //Check every frame for player input
         //Apply input every frame as movement
         private Rigidbody rb;
@@ -39,7 +38,6 @@ namespace Assets.Scripts
                 rb.velocity = new Vector3();
                 return;
             }
-
             if (jumpButton == null)
             {
                 return;
