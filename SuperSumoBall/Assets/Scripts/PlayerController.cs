@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
     //Apply input every frame as movement
     private Rigidbody rb;
     public float speed = 20;  //should show up in the inspector
-    public float jumpForce = 40; //should show up in the inspector
-    public float poundForce = 20; //should show up in the inspector
+    public float jumpForce = 50; //should show up in the inspector
+    public float poundForce = 100; //should show up in the inspector
     public string jumpButton;
     public string horizontalButton;
     public string verticalButton;
@@ -59,7 +59,6 @@ public class PlayerController : MonoBehaviour
         var ray = new Ray(origin, Vector3.down);
         if (Physics.Raycast(ray, out hit))
         {
-            Debug.Log("Player distance: " + hit.distance);
             if (hit.collider.gameObject.name == "TestPlane" && hit.distance <= 1)
             {
                 if (impacts != null) { impacts.Play(); }
