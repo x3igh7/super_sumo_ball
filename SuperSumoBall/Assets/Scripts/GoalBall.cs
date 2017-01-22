@@ -94,7 +94,7 @@ namespace Assets.Scripts
             }
             for (int i = 0; i < order.Count; i++)
             {
-                leaderText += "\nPlayer " + order[i] + " - " + ScoreList[order[i]];
+                leaderText += "\nPlayer " + order[i] + " - " + ScoreList[order[i]].ToString();
             }
             Leaderboard.text = leaderText;
         }
