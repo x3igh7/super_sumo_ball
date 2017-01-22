@@ -10,9 +10,9 @@ namespace Assets.Scripts
         private Mesh mesh;
 
         private Vector3[] vertices;
-        public float dampner = 0.925f;
-        public float maxWaveHeight = 10.0f;
-        public float MinimumCollisionMagnitude = 10.0f;
+        public float dampner = 0.525f;
+        public float maxWaveHeight = 5.0f;
+        public float MinimumCollisionMagnitude = 5.0f;
 
         public int baseSplashForce = 1000;
 
@@ -58,42 +58,45 @@ namespace Assets.Scripts
 
         private void Update()
         {
-            int[] currentBuffer;
-
-            // need to maintain two buffers. one trackers where the ripple was
-            // the other tracks where it needs to be next.
-            // by swapping between the two buffers you can create the ripple effect.
-            if (swapMe)
-            {
-                // process the ripples for this frame
-                processRipples(buffer1, buffer2);
-                currentBuffer = buffer2;
-            }
-            else
-            {
-                processRipples(buffer2, buffer1);
-                currentBuffer = buffer1;
-            }
-
-            swapMe = !swapMe;
-
-            // apply the ripples to our buffer
             Vector3[] theseVertices = new Vector3[vertices.Length];
-            int vertIndex;
-            int i = 0;
-            for (i = 0; i < currentBuffer.Length; i++)
+            for (int j = 0; j < 2; j++)
             {
-                vertIndex = vertexIndices[i];
-                theseVertices[vertIndex] = vertices[vertIndex];
-                theseVertices[vertIndex].y += ((float)currentBuffer[i] / baseSplashForce) * maxWaveHeight;
+
+                int[] currentBuffer;
+
+                // need to maintain two buffers. one trackers where the ripple was
+                // the other tracks where it needs to be next.
+                // by swapping between the two buffers you can create the ripple effect.
+                if (swapMe)
+                {
+                    // process the ripples for this frame
+                    processRipples(buffer1, buffer2);
+                    currentBuffer = buffer2;
+                }
+                else
+                {
+                    processRipples(buffer2, buffer1);
+                    currentBuffer = buffer1;
+                }
+
+                swapMe = !swapMe;
+
+                // apply the ripples to our buffer
+                int vertIndex;
+                int i = 0;
+                for (i = 0; i < currentBuffer.Length; i++)
+                {
+                    vertIndex = vertexIndices[i];
+                    theseVertices[vertIndex] = vertices[vertIndex];
+                    theseVertices[vertIndex].y += ((float)currentBuffer[i] /250) * maxWaveHeight;
+                }
             }
+                mesh.vertices = theseVertices;
+                mesh.RecalculateNormals();
 
-            mesh.vertices = theseVertices;
-            mesh.RecalculateNormals();
-
-            var collider = GetComponent<MeshCollider>();
-            collider.sharedMesh = null;
-            collider.sharedMesh = mesh;
+                var collider = GetComponent<MeshCollider>();
+                collider.sharedMesh = null;
+                collider.sharedMesh = mesh;
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -135,7 +138,7 @@ namespace Assets.Scripts
 
         void splashAtPoint(int x, int y)
         {
-            var modifiedBaseSplash = Mathf.CeilToInt(baseSplashForce * forceMultiplier/4);
+            var modifiedBaseSplash = Mathf.CeilToInt(baseSplashForce * forceMultiplier/32);
             int position = ((y * (cols + 1)) + x);
             buffer1[position] = modifiedBaseSplash;
             buffer1[position - 1] = modifiedBaseSplash;
