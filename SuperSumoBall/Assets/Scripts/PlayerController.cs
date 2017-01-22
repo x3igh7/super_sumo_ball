@@ -35,7 +35,7 @@ namespace Assets.Scripts
             if (rb.position.y < -15)
             {
                 Vector3 resetPos = new Vector3(startPosition.x, startPosition.y, startPosition.z);
-                resetPos.y += 10f;
+                resetPos.y += 5f;
                 rb.velocity = new Vector3();
                 rb.position = resetPos;
 
