@@ -29,6 +29,10 @@ using UnityEngine.SceneManagement;
             PlayerPrefs.SetInt("Players", 4);
         }
 
+        public void ClickExit()
+        {
+            Application.Quit();
+        }
 }
 
      
