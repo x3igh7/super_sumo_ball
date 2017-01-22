@@ -92,19 +92,30 @@ namespace Assets.Scripts
 
         private Color PlayerColor()
         {
-            switch (PlayerNum)
-            {
-                case 1:
-                    return Color.blue;
-                case 2:
-                    return Color.red;
-                case 3:
-                    return Color.white;
-                case 4:
-                    return Color.black;
-                default:
-                    return Color.yellow;
+
+            Color myColor = Color.black;
+            myColor.a = 0.15f;
+
+            if (PlayerNum == 1) { 
+            myColor.b = 1f;
             }
+            else if (PlayerNum == 2)
+            {
+                myColor.r = 1f;
+            }
+            else if (PlayerNum == 3)
+            {
+                myColor.r = 1f;
+                myColor.g = 1f;
+                myColor.b = 1f;
+            }
+            else if (PlayerNum == 4)
+            {
+            }
+            else { 
+                    myColor = Color.yellow;
+            }
+            return myColor;
         }
 
         private void FixedUpdate()  //called before applying physics, movement code
