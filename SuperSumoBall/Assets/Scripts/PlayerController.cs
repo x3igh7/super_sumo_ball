@@ -26,6 +26,8 @@ namespace Assets.Scripts
             impacts.clip = Resources.Load<AudioClip>("Sounds/BallLanding");
             rb = GetComponent<Rigidbody>();
             startPosition = GetComponent<Rigidbody>().position;
+
+            gameObject.GetComponent<Renderer>().material.color = PlayerColor();
         }
 
         private void Update()
@@ -81,8 +83,26 @@ namespace Assets.Scripts
                     if ((mb as GoalBall).CurrentOwner != PlayerNum)
                     {
                         (mb as GoalBall).CurrentOwner = PlayerNum;
+                        other.gameObject.GetComponent<Renderer>().material.color = PlayerColor();
                     }
                 }
+            }
+        }
+
+        private Color PlayerColor()
+        {
+            switch (PlayerNum)
+            {
+                case 1:
+                    return Color.blue;
+                case 2:
+                    return Color.red;
+                case 3:
+                    return Color.white;
+                case 4:
+                    return Color.black;
+                default:
+                    return Color.yellow;
             }
         }
 

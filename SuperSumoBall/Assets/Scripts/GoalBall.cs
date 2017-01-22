@@ -20,6 +20,8 @@ namespace Assets.Scripts
         //Called on the first frame the script is active, often first frame of game
         void Start()
         {
+            gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+
             rb = GetComponent<Rigidbody>();
             startPosition = GetComponent<Rigidbody>().position;
             CurrentOwner = -1;
