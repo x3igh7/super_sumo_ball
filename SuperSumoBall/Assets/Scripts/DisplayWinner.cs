@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class DisplayWinner : MonoBehaviour {
 
-    public GUIText WinnerText;
+    public Text WinnerText;
 
     // Use this for initialization
     void Start () {
