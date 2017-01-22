@@ -5,10 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class DisplayWinner : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public GUIText WinnerText;
+
+    // Use this for initialization
+    void Start () {
         int winningPlayer;
+        
         winningPlayer= PlayerPrefs.GetInt("Winner");
+        WinnerText.text = "";
+
+        WinnerText.text = "Player " + winningPlayer.ToString() + " Wins!";
 
         //if (winningPlayer == 0)
         //{
