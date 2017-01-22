@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 namespace Assets.Scripts
 {
@@ -20,14 +21,28 @@ namespace Assets.Scripts
         private int DashCooldown;
         private bool DashInCooldown = false;
         private AudioSource footSteps;
+        private AudioSource RunSteps;
         private AudioSource impacts;
         private Vector3 startPosition; //save the starting position of the player
         public int PlayerNum = -1;
         private GameObject Sumo;
+        private List<AudioClip> Deaths;
+        private AudioSource DeathSound;
+        private List<AudioClip> Grunts;
+        private AudioSource GruntSound;
+        private List<AudioClip> Jumps;
+        private AudioSource JumpSound;
+        private List<AudioClip> Slaps;
+        private AudioSource SlapSound;
+        private List<AudioClip> Thuds;
+        private AudioSource ThudSound;
+
 
         //Called on the first frame the script is active, often first frame of game
         void Start()
         {
+            RunSteps = gameObject.AddComponent<AudioSource>();
+            RunSteps.clip = Resources.Load<AudioClip>("Sounds/Runsteps");
             footSteps = gameObject.AddComponent<AudioSource>();
             footSteps.clip = Resources.Load<AudioClip>("Sounds/Footsteps");
             impacts = gameObject.AddComponent<AudioSource>();
@@ -39,6 +54,39 @@ namespace Assets.Scripts
             DashCooldown = DefaultDashCooldown;
             
             gameObject.GetComponent<Renderer>().material.color = PlayerColor();
+
+            Deaths = new List<AudioClip>();
+            DeathSound = gameObject.AddComponent<AudioSource>();
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Death1"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Death2"));
+            Deaths.Add(Resources.Load<AudioClip>("Sounds/Death3"));
+
+            Grunts = new List<AudioClip>();
+            GruntSound = gameObject.AddComponent<AudioSource>();
+            Grunts.Add(Resources.Load<AudioClip>("Sounds/Grunt1"));
+            Grunts.Add(Resources.Load<AudioClip>("Sounds/Grunt2"));
+            Grunts.Add(Resources.Load<AudioClip>("Sounds/Grunt3"));
+
+            Jumps = new List<AudioClip>();
+            JumpSound = gameObject.AddComponent<AudioSource>();
+            Jumps.Add(Resources.Load<AudioClip>("Sounds/Jump1"));
+            Jumps.Add(Resources.Load<AudioClip>("Sounds/Jump2"));
+            Jumps.Add(Resources.Load<AudioClip>("Sounds/Jump3"));
+            Jumps.Add(Resources.Load<AudioClip>("Sounds/Jump4"));
+
+            Slaps = new List<AudioClip>();
+            SlapSound = gameObject.AddComponent<AudioSource>();
+            Slaps.Add(Resources.Load<AudioClip>("Sounds/Slap1"));
+            Slaps.Add(Resources.Load<AudioClip>("Sounds/Slap2"));
+            Slaps.Add(Resources.Load<AudioClip>("Sounds/Slap3"));
+            Slaps.Add(Resources.Load<AudioClip>("Sounds/Slap4"));
+
+            Thuds = new List<AudioClip>();
+            ThudSound = gameObject.AddComponent<AudioSource>();
+            Thuds.Add(Resources.Load<AudioClip>("Sounds/Thud1"));
+            Thuds.Add(Resources.Load<AudioClip>("Sounds/Thud2"));
+            Thuds.Add(Resources.Load<AudioClip>("Sounds/Thud3"));
+
         }
 
         public void LinkSumo(GameObject sumo)
@@ -249,5 +297,61 @@ namespace Assets.Scripts
             }
 
         }
+        
+        private void PlayRunLoop()
+        {
+            if (RunSteps.isPlaying)
+            {
+                RunSteps.Stop();
+            }
+            if (footSteps.isPlaying)
+            {
+                return;
+            }
+            footSteps.Play();
+        }
+        private void PlayChargeLoop()
+        {
+            if (footSteps.isPlaying)
+            {
+                footSteps.Stop();
+            }
+            if (RunSteps.isPlaying)
+            {
+                return;
+            }
+            RunSteps.Play();
+        }
+        private void PlaySlap()
+        {
+            int chosenSound = (int)Random.Range(0f, (float)Slaps.Count);
+            SlapSound.clip = Slaps[chosenSound];
+            SlapSound.Play();
+        }
+        private void PlayJumps()
+        {
+            int chosenSound = (int)Random.Range(0f, (float)Jumps.Count);
+            JumpSound.clip = Jumps[chosenSound];
+            JumpSound.Play();
+        }
+        private void PlayThud()
+        {
+            int chosenSound = (int)Random.Range(0f, (float)Thuds.Count);
+            ThudSound.clip = Thuds[chosenSound];
+            ThudSound.Play();
+        }
+        private void PlayGrunt()
+        {
+            int chosenSound = (int)Random.Range(0f, (float)Grunts.Count);
+            GruntSound.clip = Grunts[chosenSound];
+            GruntSound.Play();
+        }
+        private void PlayFall()
+        {
+            int chosenSound = (int)Random.Range(0f, (float)Deaths.Count);
+            DeathSound.clip = Deaths[chosenSound];
+            DeathSound.Play();
+        }
+
     } 
 }

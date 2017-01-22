@@ -77,7 +77,6 @@ namespace Assets.Scripts
 
         public void UpdateLeaderboard()
         {
-            string leaderText = "Leaderboard:";
             List<int> order = new List<int>();
             for (int i = 1; i < ScoreList.Count; i++)
             {
@@ -95,9 +94,10 @@ namespace Assets.Scripts
                     order.Insert(0, i);
                 }
             }
+            string leaderText = "Leaderboard:";
             for (int i = 0; i < order.Count; i++)
             {
-                leaderText += "\nPlayer " + order[i] + " - " + ScoreList[order[i]].ToString();
+                leaderText += "\nPlayer " + order[i] + " (" + PlayerColor(order[i]) + ") -  " + ScoreList[order[i]].ToString();
             }
             Leaderboard.text = leaderText;
         }
@@ -120,5 +120,29 @@ namespace Assets.Scripts
             return winner;
         }
 
+        private string PlayerColor(int PlayerNum)
+        {
+            
+            if (PlayerNum == 1)
+            {
+                return "Blue";
+            }
+            else if (PlayerNum == 2)
+            {
+                return "Red";
+            }
+            else if (PlayerNum == 3)
+            {
+                return "White";
+            }
+            else if (PlayerNum == 4)
+            {
+                return "Black";
+            }
+            else
+            {
+                return "Yellow";
+            }
+        }
     }
 }
