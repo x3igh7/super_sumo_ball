@@ -3,9 +3,7 @@ using UnityEngine;
 
 public class LoadPlayers : MonoBehaviour {
     public GameObject player;
-    public int numberOfPlayers;
-
-    
+    private int numberOfPlayers = 1;
 
 	// Use this for initialization
 	void Start () {
