@@ -144,7 +144,7 @@ namespace Assets.Scripts
 
         public void Dash(Vector3 movement, float speed)
         {
-            Debug.Log("Dash: " + DashDuration);
+            //Debug.Log("Dash: " + DashDuration);
             if(DashDuration > 0)
             {
                 DashDuration -= 1;
@@ -239,7 +239,7 @@ namespace Assets.Scripts
         {
 
             Color myColor = Color.black;
-            myColor.a = 0.15f;
+            myColor.a = 0.30f;
 
             if (PlayerNum == 1) { 
             myColor.b = 1f;
