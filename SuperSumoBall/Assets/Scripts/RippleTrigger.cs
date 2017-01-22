@@ -10,13 +10,13 @@ namespace Assets.Scripts
         private Mesh mesh;
 
         private Vector3[] vertices;
-        public float dampner = 0.525f;
+        public float dampner = 0.9f;
         public float maxWaveHeight = 5.0f;
-        public float MinimumCollisionMagnitude = 5.0f;
+        public float MinimumCollisionMagnitude = 10.0f;
 
-        public int baseSplashForce = 1000;
+        public int baseSplashForce = 100;
 
-        private float forceMultiplier;
+        private float forceMultiplier = 1;
         private bool swapMe = true;
 
         public int cols = 128;
@@ -59,7 +59,7 @@ namespace Assets.Scripts
         private void Update()
         {
             Vector3[] theseVertices = new Vector3[vertices.Length];
-            for (int j = 0; j < 2; j++)
+            for (int j = 0; j < 3; j++)
             {
 
                 int[] currentBuffer;
@@ -88,15 +88,16 @@ namespace Assets.Scripts
                 {
                     vertIndex = vertexIndices[i];
                     theseVertices[vertIndex] = vertices[vertIndex];
-                    theseVertices[vertIndex].y += ((float)currentBuffer[i] /250) * maxWaveHeight;
+                    theseVertices[vertIndex].y += ((float)currentBuffer[i] / (forceMultiplier * 10)) * maxWaveHeight;
                 }
             }
-                mesh.vertices = theseVertices;
-                mesh.RecalculateNormals();
 
-                var collider = GetComponent<MeshCollider>();
-                collider.sharedMesh = null;
-                collider.sharedMesh = mesh;
+            mesh.vertices = theseVertices;
+            mesh.RecalculateNormals();
+
+            var collider = GetComponent<MeshCollider>();
+            collider.sharedMesh = null;
+            collider.sharedMesh = mesh;
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -138,17 +139,17 @@ namespace Assets.Scripts
 
         void splashAtPoint(int x, int y)
         {
-            var modifiedBaseSplash = Mathf.CeilToInt(baseSplashForce * forceMultiplier/32);
+            //var modifiedBaseSplash = Mathf.CeilToInt(baseSplashForce * forceMultiplier/32);
             int position = ((y * (cols + 1)) + x);
-            buffer1[position] = modifiedBaseSplash;
-            buffer1[position - 1] = modifiedBaseSplash;
-            buffer1[position + 1] = modifiedBaseSplash;
-            buffer1[position + (cols + 1)] = modifiedBaseSplash;
-            buffer1[position + (cols + 1) + 1] = modifiedBaseSplash;
-            buffer1[position + (cols + 1) - 1] = modifiedBaseSplash;
-            buffer1[position - (cols + 1)] = modifiedBaseSplash;
-            buffer1[position - (cols + 1) + 1] = modifiedBaseSplash;
-            buffer1[position - (cols + 1) - 1] = modifiedBaseSplash;
+            buffer1[position] = baseSplashForce;
+            buffer1[position - 1] = baseSplashForce;
+            buffer1[position + 1] = baseSplashForce;
+            buffer1[position + (cols + 1)] = baseSplashForce;
+            buffer1[position + (cols + 1) + 1] = baseSplashForce;
+            buffer1[position + (cols + 1) - 1] = baseSplashForce;
+            buffer1[position - (cols + 1)] = baseSplashForce;
+            buffer1[position - (cols + 1) + 1] = baseSplashForce;
+            buffer1[position - (cols + 1) - 1] = baseSplashForce;
         }
 
         void processRipples(int[] source, int[] dest)
