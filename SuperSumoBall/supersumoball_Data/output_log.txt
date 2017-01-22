@@ -19,13 +19,13 @@ Platform assembly: C:\Users\Dri Surface\Documents\GitHub\super_sumo_ball\SuperSu
 Loading C:\Users\Dri Surface\Documents\GitHub\super_sumo_ball\SuperSumoBall\supersumoball_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: C:\Users\Dri Surface\Documents\GitHub\super_sumo_ball\SuperSumoBall\supersumoball_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Dri Surface\Documents\GitHub\super_sumo_ball\SuperSumoBall\supersumoball_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.207 seconds
+- Completed reload, in  0.204 seconds
 Platform assembly: C:\Users\Dri Surface\Documents\GitHub\super_sumo_ball\SuperSumoBall\supersumoball_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Dri Surface\Documents\GitHub\super_sumo_ball\SuperSumoBall\supersumoball_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1080 59Hz; virtual: 4766x3984 at 0,-2160
+desktop: 2736x1824 60Hz; virtual: 4766x3984 at 0,-2160
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.916098 ms
+UnloadTime: 3.345226 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 3200 -> priority: 1 
+  Thread -> id: 1034 -> priority: 1 
