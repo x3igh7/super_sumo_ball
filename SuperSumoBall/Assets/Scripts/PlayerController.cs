@@ -8,7 +8,7 @@ namespace Assets.Scripts
         private Rigidbody rb;
         public float speed = 20;  //should show up in the inspector
         public float jumpForce = 50; //should show up in the inspector
-        public float poundForce = 100; //should show up in the inspector
+        public float poundForce = 80; //should show up in the inspector
         public string jumpButton;
         public string horizontalButton;
         public string verticalButton;
@@ -36,8 +36,9 @@ namespace Assets.Scripts
             {
                 Vector3 resetPos = new Vector3(startPosition.x, startPosition.y, startPosition.z);
                 resetPos.y += 10f;
-                rb.position = resetPos;
                 rb.velocity = new Vector3();
+                rb.position = resetPos;
+
                 return;
             }
             if (jumpButton == null)
