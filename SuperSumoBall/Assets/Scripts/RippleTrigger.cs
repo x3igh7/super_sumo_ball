@@ -12,7 +12,6 @@ namespace Assets.Scripts
         private Vector3[] vertices;
         public float dampner = 0.925f;
         public float maxWaveHeight = 10.0f;
-        public float collisionMinimumMagnitude = 10.0f;
 
         public int baseSplashForce = 1000;
 
@@ -99,7 +98,7 @@ namespace Assets.Scripts
         private void OnCollisionEnter(Collision collision)
         {
             var collisionMagnitude = collision.relativeVelocity.magnitude;
-            if (collision.gameObject.tag == "Player" && collisionMagnitude > collisionMinimumMagnitude)
+            if (collision.gameObject.tag == "Player" && collisionMagnitude > 6.0f)
             {
                 forceMultiplier = Mathf.CeilToInt(collisionMagnitude);
                 checkCollision(collision);
