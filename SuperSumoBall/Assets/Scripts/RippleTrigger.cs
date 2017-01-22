@@ -10,11 +10,11 @@ namespace Assets.Scripts
         private Mesh mesh;
 
         private Vector3[] vertices;
-        public float dampner = 0.9f;
-        public float maxWaveHeight = 5.0f;
-        public float MinimumCollisionMagnitude = 10.0f;
+        private float dampner = 0.9f;
+        private float maxWaveHeight = 4.0f;
+        private float MinimumCollisionMagnitude = 10.0f;
 
-        public int baseSplashForce = 100;
+        private int baseSplashForce = 1000;
 
         private float forceMultiplier = 1;
         private bool swapMe = true;
@@ -118,7 +118,7 @@ namespace Assets.Scripts
             var ray = new Ray(origin, contact.point - origin);
             if (Physics.Raycast(ray, out hit))
             { 
-                if(hit.collider.gameObject.name == "TestPlane")
+                if(hit.collider.gameObject.tag == "Surface")
                 {
                     // getting the inverse of the coordinates for an accurate hit location
                     var xTextureCoord = 1 - hit.textureCoord.x;

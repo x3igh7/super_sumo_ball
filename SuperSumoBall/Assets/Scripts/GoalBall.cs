@@ -13,16 +13,19 @@ namespace Assets.Scripts
 
         public int CurrentOwner = -1;
         public Text Leaderboard;
+        public Text Timer;
+        public float TimeLeft; 
+        public List<int> ScoreList = new List<int>();
+
         private Rigidbody rb;
         private Vector3 startPosition; //save the starting position of the player
-        private List<int> ScoreList;
         private int playerCount;
 
         //Called on the first frame the script is active, often first frame of game
         void Start()
         {
-            ScoreList = new List<int>();
             playerCount = PlayerPrefs.GetInt("Players");
+            TimeLeft = 120;
 
             for (int i= 0; i<=playerCount; i++)
             {
@@ -39,19 +42,34 @@ namespace Assets.Scripts
 
         private void Update()
         {
+            TimeLeft -= Time.deltaTime;
+            UpdateTimer();
+            if (Mathf.RoundToInt(TimeLeft) == 0)
+            {
+                var winningPlayerNum = GetWinner();
+                print("Player " + winningPlayerNum + "won the game.");
+                // Gameover
+            }
+
+
             if (rb.position.y < -15)
             {
                 if (CurrentOwner > -1)
                 {
                     //TODO:  Score one!
-                    ScoreList[CurrentOwner] += 1;
-                    print("Scoring for team: " + CurrentOwner + "and now its score is: " + ScoreList[CurrentOwner]);
+                    ScoreList[CurrentOwner] += 3;
                     CurrentOwner = -1;
                     UpdateLeaderboard();
                 }
                 rb.position = startPosition;
                 rb.velocity = new Vector3();
             }
+        }
+
+        public void UpdateTimer()
+        {
+            var timeRemaining = Mathf.RoundToInt(TimeLeft).ToString() + " seconds left!";
+            Timer.text = timeRemaining;
         }
 
         public void UpdateLeaderboard()
@@ -76,9 +94,27 @@ namespace Assets.Scripts
             }
             for (int i = 0; i < order.Count; i++)
             {
-                leaderText += "\nPlayer " + order[i] + " - " + ScoreList[order[i]];
+                leaderText += "\nPlayer " + order[i] + " - " + ScoreList[order[i]].ToString();
             }
             Leaderboard.text = leaderText;
+        }
+
+        public int GetWinner()
+        {
+            var winner = 0;
+            var highScore = 0;
+            for (int i = 0; i < ScoreList.Count; i++)
+            {
+                if (ScoreList[i] > highScore)
+                {
+                    winner = i + 1;
+                    highScore = ScoreList[i];
+                } else if (ScoreList[i] == highScore) {
+                    winner = 0;
+                }
+            }
+
+            return winner;
         }
 
     }
