@@ -35,14 +35,23 @@ namespace Assets.Scripts
             if (rb.position.y < -15)
             {
                 // lose a point for falling off.
-                //var scoreList = GetComponents<MonoBehaviour>();
-                //foreach (var item in scoreList)
+                //var bodies = GetComponents<Rigidbody>();
+                //foreach (var goal in bodies)
                 //{
-                //    if (item is GoalBall)
+                //    Debug.Log(goal.tag);
+                //    if (goal.tag == "Objective")
                 //    {
-                //        Debug.Log((item as GoalBall).ScoreList[PlayerNum - 1]);
-                //        (item as GoalBall).ScoreList[PlayerNum - 1] -= 1;
-                //        (item as GoalBall).UpdateLeaderboard();
+                //        var list = goal.GetComponents<MonoBehaviour>();
+                //        foreach (var item in list)
+                //        {
+                //            if (item is GoalBall)
+                //            {
+                //                Debug.Log((item as GoalBall).ScoreList[PlayerNum - 1]);
+                //                (item as GoalBall).ScoreList[PlayerNum - 1] -= 1;
+                //                (item as GoalBall).UpdateLeaderboard();
+                //            }
+                //        }
+
                 //    }
                 //}
 
