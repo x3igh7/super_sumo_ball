@@ -139,16 +139,223 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
+      in configuration does not match rotation in animation file\nsumorun_nohips\nClip
+      'Default Take' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo07_01' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo09_01_001' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo09_01_002' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo09_02' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo09_11' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo09_12_001' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo13_11' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo13_11_001' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo13_13' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo13_19' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo13_32' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo16_03' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo16_04' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo16_05' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo16_15' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo16_35' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo16_55' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo16_55_001' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo09_12' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo09_01' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo35_17' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo35_17-NoHips' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Sumo35_17_001' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Spine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LHipJoint
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LHipJoint/LeftUpLeg
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LHipJoint/LeftUpLeg/LeftLeg
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LHipJoint/LeftUpLeg/LeftLeg/LeftFoot
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LHipJoint/LeftUpLeg/LeftLeg/LeftFoot/LeftToeBase
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftFingerBase
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftFingerBase/LeftHandFinger1
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LThumb
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/Neck
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/Neck/Neck1
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/Neck/Neck1/Head
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm/RightForeArm
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightFingerBase
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightFingerBase/RightHandFinger1
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RThumb
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/RHipJoint
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/RHipJoint/RightUpLeg
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/RHipJoint/RightUpLeg/RightLeg
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/RHipJoint/RightUpLeg/RightLeg/RightFoot
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/RHipJoint/RightUpLeg/RightLeg/RightFoot/RightToeBase
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t_Eyebrow008
+        weight: 0
+      - path: Sumo_makehuman_mawashi_t_Eyelashes01
+        weight: 0
+      - path: Sumo_makehuman_mawashi_t_High-poly
+        weight: 0
+      - path: Sumo_makehuman_mawashi_t_Male_generic
+        weight: 0
+      - path: Sumo_makehuman_mawashi_t_Mawashi
+        weight: 0
+      - path: Sumo_makehuman_mawashi_t_Short04
+        weight: 0
+      - path: Sumo_makehuman_mawashi_t_Teeth_base
+        weight: 0
+      - path: Sumo_makehuman_mawashi_t_Tongue01
+        weight: 0
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -175,8 +382,429 @@ ModelImporter:
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
-    human: []
-    skeleton: []
+    human:
+    - boneName: Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerBack
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LThumb
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftFingerBase
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftHandFinger1
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RThumb
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightFingerBase
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightHandFinger1
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: sumorun_nohips(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sumo_makehuman_mawashi_t
+      parentName: sumorun_nohips(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hips
+      parentName: Sumo_makehuman_mawashi_t
+      position: {x: -0.0000002386514, y: -0.00000035762787, z: 32.078922}
+      rotation: {x: 0.5972125, y: -0.59695035, z: -0.37901255, w: -0.37859896}
+      scale: {x: 1.0000113, y: 1.0000098, z: 1.0000126}
+    - name: LHipJoint
+      parentName: Hips
+      position: {x: 0.000002107172, y: -0.00000015277264, z: -0.0000005874288}
+      rotation: {x: -0.6590774, y: 0.62970173, z: 0.3214946, w: -0.2563863}
+      scale: {x: 0.9999988, y: 0.9999982, z: 0.99999905}
+    - name: LeftUpLeg
+      parentName: LHipJoint
+      position: {x: -3.7620318, y: 0.00000086426735, z: 0.00000013411045}
+      rotation: {x: 0.4621787, y: -0.32882112, z: 0.5950175, w: 0.5694047}
+      scale: {x: 1.0000063, y: 1.0000043, z: 0.9999998}
+    - name: LeftLeg
+      parentName: LeftUpLeg
+      position: {x: -13.774243, y: 0.00000090897083, z: 0.0000015497208}
+      rotation: {x: -0.021968344, y: -0.060793653, z: 0.015388917, w: 0.99779}
+      scale: {x: 1.0000012, y: 1.0000021, z: 1.0000023}
+    - name: LeftFoot
+      parentName: LeftLeg
+      position: {x: -14.969348, y: 0.0000009685755, z: 0.00000071525574}
+      rotation: {x: 0.35023743, y: 0.4992656, z: -0.32544222, w: 0.72260296}
+      scale: {x: 1.0000037, y: 1.0000006, z: 1.0000014}
+    - name: LeftToeBase
+      parentName: LeftFoot
+      position: {x: -5.0352516, y: 0.0000005364418, z: -0.00000011920929}
+      rotation: {x: 0.373593, y: 0.025334368, z: -0.08996231, w: 0.9228723}
+      scale: {x: 1.0000094, y: 1.000004, z: 1.000014}
+    - name: LowerBack
+      parentName: Hips
+      position: {x: -3.2359612, y: 0.0000002682209, z: -0.00000030733645}
+      rotation: {x: -0.000048279755, y: 0.2587966, z: 0.00016636819, w: -0.9659319}
+      scale: {x: 1.0000027, y: 1.0000018, z: 1.0000018}
+    - name: Spine
+      parentName: LowerBack
+      position: {x: -4.794793, y: 0.00000029057264, z: 0.0000004209578}
+      rotation: {x: 0.011219285, y: -0.2809492, z: 0.004625999, w: -0.9596459}
+      scale: {x: 1.0000036, y: 1.000001, z: 0.9999976}
+    - name: Spine1
+      parentName: Spine
+      position: {x: -5.3332076, y: 0.000000461936, z: -0.00000019930303}
+      rotation: {x: -0.011494772, y: 0.3398799, z: -0.0038865434, w: -0.9403905}
+      scale: {x: 1.0000048, y: 1.0000013, z: 1.0000069}
+    - name: LeftShoulder
+      parentName: Spine1
+      position: {x: -4.2355328, y: 0.91445756, z: -0.9688475}
+      rotation: {x: 0.7296234, y: -0.68305504, z: 0.01632861, w: -0.028616525}
+      scale: {x: 0.9999983, y: 0.99999857, z: 0.9999998}
+    - name: LeftArm
+      parentName: LeftShoulder
+      position: {x: -6.623646, y: 0.00000023841858, z: 0.0000010728836}
+      rotation: {x: -0.12230149, y: -0.010278937, z: 0.048615564, w: 0.99124837}
+      scale: {x: 1.0000014, y: 1.0000027, z: 1.0000064}
+    - name: LeftForeArm
+      parentName: LeftArm
+      position: {x: -8.851446, y: 0.00000023841858, z: 0}
+      rotation: {x: 0.10917791, y: 0.03207799, z: -0.034504063, w: 0.9929052}
+      scale: {x: 1.0000011, y: 1.000009, z: 1.0000021}
+    - name: LeftHand
+      parentName: LeftForeArm
+      position: {x: -8.807469, y: 0.0000010728836, z: 0.0000010728836}
+      rotation: {x: -0.14038059, y: 0.10339432, z: 0.05017681, w: 0.98340493}
+      scale: {x: 0.99999964, y: 0.99999803, z: 1.0000055}
+    - name: LThumb
+      parentName: LeftHand
+      position: {x: -1.4764383, y: -0.046720326, z: 0.76719534}
+      rotation: {x: -0.014405888, y: 0.26561219, z: 0.4184974, w: 0.86839086}
+      scale: {x: 0.99998915, y: 1.0000131, z: 1.0000114}
+    - name: LeftFingerBase
+      parentName: LeftHand
+      position: {x: -1.2040899, y: 0.00000011920929, z: -0.0000023841858}
+      rotation: {x: -0.33541408, y: -0.01704557, z: -0.06861139, w: 0.9394144}
+      scale: {x: 0.9999987, y: 0.9999982, z: 1.0000051}
+    - name: LeftHandFinger1
+      parentName: LeftFingerBase
+      position: {x: -2.8001819, y: 0.00000071525574, z: -0.00000023841858}
+      rotation: {x: -0.17110671, y: -0.19410916, z: -0.09933528, w: 0.9608208}
+      scale: {x: 1.0000193, y: 0.999992, z: 0.9999902}
+    - name: Neck
+      parentName: Spine1
+      position: {x: -6.6210046, y: 0.00000062584877, z: -0.00000019930303}
+      rotation: {x: 0.00029801298, y: -0.11241478, z: -0.00003288593, w: 0.9936614}
+      scale: {x: 1.0000031, y: 1.0000015, z: 0.9999988}
+    - name: Neck1
+      parentName: Neck
+      position: {x: -2.0059521, y: 0.00000017881393, z: 0.0000023460016}
+      rotation: {x: -0.000007301218, y: -0.00012727824, z: 0.000000096086275, w: 1}
+      scale: {x: 1.0000021, y: 1.0000036, z: 1.0000012}
+    - name: Head
+      parentName: Neck1
+      position: {x: -2.0050797, y: 0.00000024586916, z: 0.00000015011756}
+      rotation: {x: -0.00000008997447, y: -0.25245053, z: -0.0000017584325, w: -0.9676098}
+      scale: {x: 0.99999905, y: 1.0000027, z: 1.0000076}
+    - name: RightShoulder
+      parentName: Spine1
+      position: {x: -4.2355328, y: -0.91331184, z: -0.9699317}
+      rotation: {x: 0.7294186, y: 0.682907, z: 0.021650905, w: 0.03343695}
+      scale: {x: 1.0000143, y: 1.0000068, z: 1.0000099}
+    - name: RightArm
+      parentName: RightShoulder
+      position: {x: -6.623595, y: 0.0000010430813, z: -0.0000024437904}
+      rotation: {x: 0.12289707, y: -0.0096081365, z: -0.048753817, w: 0.99117464}
+      scale: {x: 0.9999964, y: 0.9999957, z: 1.0000038}
+    - name: RightForeArm
+      parentName: RightArm
+      position: {x: -8.850837, y: 0.0000013113022, z: -0.00000011920929}
+      rotation: {x: -0.11605032, y: 0.030508341, z: 0.038037207, w: 0.99204576}
+      scale: {x: 1.0000038, y: 1.0000058, z: 0.999999}
+    - name: RightHand
+      parentName: RightForeArm
+      position: {x: -8.54478, y: -0.00000023841858, z: -0.00000011920929}
+      rotation: {x: -0.1541197, y: -0.10491119, z: 0.05169941, w: -0.98110545}
+      scale: {x: 1.0000056, y: 1.0000025, z: 1.0000074}
+    - name: RThumb
+      parentName: RightHand
+      position: {x: -1.4755914, y: 0.046845675, z: 0.76703393}
+      rotation: {x: 0.014524544, y: 0.2654065, z: -0.4185405, w: 0.86843103}
+      scale: {x: 1.0000031, y: 1.0000052, z: 1.0000169}
+    - name: RightFingerBase
+      parentName: RightHand
+      position: {x: -1.2031155, y: 0.0000011920929, z: -0.0000060796738}
+      rotation: {x: 0.33532268, y: -0.017112466, z: 0.06868312, w: 0.9394406}
+      scale: {x: 0.99999917, y: 0.9999916, z: 1.0000108}
+    - name: RightHandFinger1
+      parentName: RightFingerBase
+      position: {x: -2.800137, y: -0.0000011920929, z: 0.0000030994415}
+      rotation: {x: 0.17109387, y: -0.19409835, z: 0.09932361, w: 0.96082646}
+      scale: {x: 1.0000104, y: 0.99999535, z: 1.0000081}
+    - name: RHipJoint
+      parentName: Hips
+      position: {x: 0.000002107172, y: -0.00000015277264, z: -0.0000005874288}
+      rotation: {x: 0.6589178, y: 0.62994653, z: -0.32101417, w: -0.2567967}
+      scale: {x: 1.0000024, y: 1.0000024, z: 0.9999975}
+    - name: RightUpLeg
+      parentName: RHipJoint
+      position: {x: -3.7620318, y: 0.0000010728836, z: 0.00000009685755}
+      rotation: {x: -0.46219578, y: -0.32871988, z: -0.59507346, w: 0.5693908}
+      scale: {x: 1.0000082, y: 1.0000055, z: 0.9999987}
+    - name: RightLeg
+      parentName: RightUpLeg
+      position: {x: -13.774263, y: 0.0000019967556, z: 0.00000028312206}
+      rotation: {x: -0.022068186, y: 0.060792066, z: 0.015394939, w: -0.9977878}
+      scale: {x: 1.0000001, y: 0.999996, z: 0.9999993}
+    - name: RightFoot
+      parentName: RightLeg
+      position: {x: -14.969347, y: 0.000000949949, z: 0.00000014249235}
+      rotation: {x: 0.35023713, y: -0.49926576, z: -0.32544208, w: -0.72260314}
+      scale: {x: 1.000003, y: 1.0000094, z: 1.0000076}
+    - name: RightToeBase
+      parentName: RightFoot
+      position: {x: -5.035253, y: 0.0000006109476, z: -0.00000029802322}
+      rotation: {x: 0.37363902, y: -0.025329987, z: -0.08996367, w: -0.92285365}
+      scale: {x: 1.0000104, y: 0.99999857, z: 1.0000094}
+    - name: Sumo_makehuman_mawashi_t_Eyebrow008
+      parentName: sumorun_nohips(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sumo_makehuman_mawashi_t_Eyelashes01
+      parentName: sumorun_nohips(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sumo_makehuman_mawashi_t_High-poly
+      parentName: sumorun_nohips(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sumo_makehuman_mawashi_t_Male_generic
+      parentName: sumorun_nohips(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sumo_makehuman_mawashi_t_Mawashi
+      parentName: sumorun_nohips(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sumo_makehuman_mawashi_t_Short04
+      parentName: sumorun_nohips(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sumo_makehuman_mawashi_t_Teeth_base
+      parentName: sumorun_nohips(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sumo_makehuman_mawashi_t_Tongue01
+      parentName: sumorun_nohips(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -187,10 +815,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
