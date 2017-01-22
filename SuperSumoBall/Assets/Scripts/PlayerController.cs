@@ -116,7 +116,7 @@ namespace Assets.Scripts
             if (Sumo != null)
             {
                 Sumo.transform.position = rb.position;
-                Sumo.transform.position += new Vector3(0, -0.75f, 0);
+                Sumo.transform.position += new Vector3(0, -1f, 0);
             }
         }
 
@@ -144,7 +144,6 @@ namespace Assets.Scripts
 
         public void Dash(Vector3 movement, float speed)
         {
-            Debug.Log("Dash: " + DashDuration);
             if(DashDuration > 0)
             {
                 DashDuration -= 1;
