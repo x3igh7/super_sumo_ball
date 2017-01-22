@@ -1,0 +1,295 @@
+fileFormatVersion: 2
+guid: 25c9f854b1b88e946b59489e455a83b2
+timeCreated: 1485047490
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Head
+    100002: Hips
+    100004: LeftArm
+    100006: LeftFingerBase
+    100008: LeftFoot
+    100010: LeftForeArm
+    100012: LeftHand
+    100014: LeftHandFinger1
+    100016: LeftLeg
+    100018: LeftShoulder
+    100020: LeftToeBase
+    100022: LeftUpLeg
+    100024: LHipJoint
+    100026: LowerBack
+    100028: LThumb
+    100030: Neck
+    100032: Neck1
+    100034: RHipJoint
+    100036: RightArm
+    100038: RightFingerBase
+    100040: RightFoot
+    100042: RightForeArm
+    100044: RightHand
+    100046: RightHandFinger1
+    100048: RightLeg
+    100050: RightShoulder
+    100052: RightToeBase
+    100054: RightUpLeg
+    100056: RThumb
+    100058: Spine
+    100060: Spine1
+    100062: Sumo_makehuman_mawashi_t
+    100064: Sumo_makehuman_mawashi_t_Eyebrow008
+    100066: Sumo_makehuman_mawashi_t_Eyelashes01
+    100068: Sumo_makehuman_mawashi_t_High-poly
+    100070: Sumo_makehuman_mawashi_t_Male_generic
+    100072: Sumo_makehuman_mawashi_t_Mawashi
+    100074: Sumo_makehuman_mawashi_t_Short04
+    100076: Sumo_makehuman_mawashi_t_Teeth_base
+    100078: Sumo_makehuman_mawashi_t_Tongue01
+    100080: SUPER_SUMO_BALL
+    100082: //RootNode
+    400000: Head
+    400002: Hips
+    400004: LeftArm
+    400006: LeftFingerBase
+    400008: LeftFoot
+    400010: LeftForeArm
+    400012: LeftHand
+    400014: LeftHandFinger1
+    400016: LeftLeg
+    400018: LeftShoulder
+    400020: LeftToeBase
+    400022: LeftUpLeg
+    400024: LHipJoint
+    400026: LowerBack
+    400028: LThumb
+    400030: Neck
+    400032: Neck1
+    400034: RHipJoint
+    400036: RightArm
+    400038: RightFingerBase
+    400040: RightFoot
+    400042: RightForeArm
+    400044: RightHand
+    400046: RightHandFinger1
+    400048: RightLeg
+    400050: RightShoulder
+    400052: RightToeBase
+    400054: RightUpLeg
+    400056: RThumb
+    400058: Spine
+    400060: Spine1
+    400062: Sumo_makehuman_mawashi_t
+    400064: Sumo_makehuman_mawashi_t_Eyebrow008
+    400066: Sumo_makehuman_mawashi_t_Eyelashes01
+    400068: Sumo_makehuman_mawashi_t_High-poly
+    400070: Sumo_makehuman_mawashi_t_Male_generic
+    400072: Sumo_makehuman_mawashi_t_Mawashi
+    400074: Sumo_makehuman_mawashi_t_Short04
+    400076: Sumo_makehuman_mawashi_t_Teeth_base
+    400078: Sumo_makehuman_mawashi_t_Tongue01
+    400080: SUPER_SUMO_BALL
+    400082: //RootNode
+    2300000: SUPER_SUMO_BALL
+    3300000: SUPER_SUMO_BALL
+    4300000: Sumo_makehuman_mawashi_t_Mawashi
+    4300002: Sumo_makehuman_mawashi_t_Tongue01
+    4300004: Sumo_makehuman_mawashi_t_Teeth_base
+    4300006: Sumo_makehuman_mawashi_t_Eyelashes01
+    4300008: Sumo_makehuman_mawashi_t_Eyebrow008
+    4300010: Sumo_makehuman_mawashi_t_High-poly
+    4300012: Sumo_makehuman_mawashi_t_Short04
+    4300014: Sumo_makehuman_mawashi_t_Male_generic
+    4300016: SUPER_SUMO_BALL
+    7400000: Default Take
+    7400002: Sumo36_37
+    7400004: Sumo38_03
+    7400006: Sumo42_01
+    9500000: //RootNode
+    13700000: Sumo_makehuman_mawashi_t_Eyebrow008
+    13700002: Sumo_makehuman_mawashi_t_Eyelashes01
+    13700004: Sumo_makehuman_mawashi_t_High-poly
+    13700006: Sumo_makehuman_mawashi_t_Male_generic
+    13700008: Sumo_makehuman_mawashi_t_Mawashi
+    13700010: Sumo_makehuman_mawashi_t_Short04
+    13700012: Sumo_makehuman_mawashi_t_Teeth_base
+    13700014: Sumo_makehuman_mawashi_t_Tongue01
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 225
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LHipJoint
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LHipJoint/LeftUpLeg
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LHipJoint/LeftUpLeg/LeftLeg
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LHipJoint/LeftUpLeg/LeftLeg/LeftFoot
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LHipJoint/LeftUpLeg/LeftLeg/LeftFoot/LeftToeBase
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftFingerBase
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftFingerBase/LeftHandFinger1
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LThumb
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/Neck
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/Neck/Neck1
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/Neck/Neck1/Head
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm/RightForeArm
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightFingerBase
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RightFingerBase/RightHandFinger1
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/LowerBack/Spine/Spine1/RightShoulder/RightArm/RightForeArm/RightHand/RThumb
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/RHipJoint
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/RHipJoint/RightUpLeg
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/RHipJoint/RightUpLeg/RightLeg
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/RHipJoint/RightUpLeg/RightLeg/RightFoot
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t/Hips/RHipJoint/RightUpLeg/RightLeg/RightFoot/RightToeBase
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t_Eyebrow008
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t_Eyelashes01
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t_High-poly
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t_Male_generic
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t_Mawashi
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t_Short04
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t_Teeth_base
+        weight: 1
+      - path: Sumo_makehuman_mawashi_t_Tongue01
+        weight: 1
+      - path: SUPER_SUMO_BALL
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
