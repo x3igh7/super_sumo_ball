@@ -34,6 +34,16 @@ namespace Assets.Scripts
         {
             if (rb.position.y < -15)
             {
+                // lose a point for falling off.
+                var scoreList = GetComponents<MonoBehaviour>();
+                foreach (var item in scoreList)
+                {
+                    if (item is GoalBall)
+                    {
+                        (item as GoalBall).ScoreList[PlayerNum] += -1;
+                    }
+                }
+
                 Vector3 resetPos = new Vector3(startPosition.x, startPosition.y, startPosition.z);
                 resetPos.y += 5f;
                 rb.velocity = new Vector3();

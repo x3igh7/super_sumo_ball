@@ -118,7 +118,7 @@ namespace Assets.Scripts
             var ray = new Ray(origin, contact.point - origin);
             if (Physics.Raycast(ray, out hit))
             { 
-                if(hit.collider.gameObject.name == "TestPlane")
+                if(hit.collider.gameObject.tag == "Surface")
                 {
                     // getting the inverse of the coordinates for an accurate hit location
                     var xTextureCoord = 1 - hit.textureCoord.x;
