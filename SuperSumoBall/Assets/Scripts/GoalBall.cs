@@ -71,7 +71,7 @@ namespace Assets.Scripts
 
         public void UpdateTimer()
         {
-            var timeRemaining = Mathf.RoundToInt(TimeLeft).ToString() + " seconds left!";
+            var timeRemaining = "Time: " + Mathf.RoundToInt(TimeLeft).ToString();
             Timer.text = timeRemaining;
         }
 

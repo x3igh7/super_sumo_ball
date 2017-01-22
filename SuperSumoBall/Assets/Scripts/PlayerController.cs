@@ -10,7 +10,7 @@ namespace Assets.Scripts
         public float speed = 20;  //should show up in the inspector
         public float jumpForce = 50; //should show up in the inspector
         public float poundForce = 80; //should show up in the inspector
-        public float dashForce = 50;
+        public float dashForce = 45;
         public string jumpButton;
         public string horizontalButton;
         public string verticalButton;
