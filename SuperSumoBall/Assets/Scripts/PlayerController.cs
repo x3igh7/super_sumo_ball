@@ -57,7 +57,7 @@ namespace Assets.Scripts
             var ray = new Ray(origin, Vector3.down);
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.gameObject.name == "TestPlane" && hit.distance <= 1)
+                if (hit.collider.gameObject.tag == "Surface" && hit.distance <= 1)
                 {
                     if (impacts != null) { impacts.Play(); }
                     rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
