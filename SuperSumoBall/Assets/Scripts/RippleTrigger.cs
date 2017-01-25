@@ -9,23 +9,24 @@ namespace Assets.Scripts
         private int[] buffer2;
         private int[] vertexIndices;
         private Mesh mesh;
+		private List<int> SkipList;
 
         private Vector3[] vertices;
-        private float dampner = 0.9f;
+        private float dampner = 0.8f;
         private float maxWaveHeight = 4.0f;
         private float MinimumCollisionMagnitude = 10.0f;
 
-        private int baseSplashForce = 1000;
+        private int baseSplashForce = 500;
 
         private float forceMultiplier = 1;
         private bool swapMe = true;
 
-        public int cols = 128;
-        public int rows = 128;
+        public int cols = 64;
+        public int rows = 64;
 
         private void Start()
         {
-
+			SkipList = new List<int>();
             mesh = GetComponent<MeshFilter>().mesh;
             vertices = mesh.vertices;
 
@@ -61,7 +62,7 @@ namespace Assets.Scripts
         private void Update()
         {
             Vector3[] theseVertices = new Vector3[vertices.Length];
-            for (int j = 0; j < 3; j++)
+            for (int j = 0; j < 2; j++)
             {
 
                 int[] currentBuffer;
@@ -88,13 +89,18 @@ namespace Assets.Scripts
                 int i = 0;
                 for (i = 0; i < currentBuffer.Length; i++)
                 {
+					if (SkipList.Contains(i))
+					{
+						//continue;
+					}
                     vertIndex = vertexIndices[i];
                     theseVertices[vertIndex] = vertices[vertIndex];
                     theseVertices[vertIndex].y += ((float)currentBuffer[i] / (forceMultiplier * 10)) * maxWaveHeight;
                 }
             }
 
-            mesh.vertices = theseVertices;
+			SkipList = new List<int>();
+			mesh.vertices = theseVertices;
             mesh.RecalculateNormals();
 
             var collider = GetComponent<MeshCollider>();
@@ -135,7 +141,22 @@ namespace Assets.Scripts
                     float row = (zCoord / zStep);
 
                     splashAtPoint((int)column, (int)row);
-                }
+					if (swapMe)
+					{
+						// process the ripples for this frame
+						processRipples(buffer1, buffer2);
+						processRipples(buffer2, buffer1);
+						processRipples(buffer1, buffer2);
+						processRipples(buffer2, buffer1);
+					}
+					else
+					{
+						processRipples(buffer2, buffer1);
+						processRipples(buffer1, buffer2);
+						processRipples(buffer2, buffer1);
+						processRipples(buffer1, buffer2);
+					}
+				}
             }
         }
 
@@ -144,15 +165,24 @@ namespace Assets.Scripts
             //var modifiedBaseSplash = Mathf.CeilToInt(baseSplashForce * forceMultiplier/32);
             int position = ((y * (cols + 1)) + x);
             buffer1[position] = baseSplashForce;
+			SkipList.Add(position);
             buffer1[position - 1] = baseSplashForce;
-            buffer1[position + 1] = baseSplashForce;
-            buffer1[position + (cols + 1)] = baseSplashForce;
-            buffer1[position + (cols + 1) + 1] = baseSplashForce;
-            buffer1[position + (cols + 1) - 1] = baseSplashForce;
-            buffer1[position - (cols + 1)] = baseSplashForce;
-            buffer1[position - (cols + 1) + 1] = baseSplashForce;
-            buffer1[position - (cols + 1) - 1] = baseSplashForce;
-        }
+			SkipList.Add(position - 1);
+			buffer1[position + 1] = baseSplashForce;
+			SkipList.Add(position + 1);
+			buffer1[position + (cols + 1)] = baseSplashForce;
+			SkipList.Add(position + (cols + 1));
+			buffer1[position + (cols + 1) + 1] = baseSplashForce;
+			SkipList.Add(position + (cols + 1) + 1);
+			buffer1[position + (cols + 1) - 1] = baseSplashForce;
+			SkipList.Add(position + (cols + 1) - 1);
+			buffer1[position - (cols + 1)] = baseSplashForce;
+			SkipList.Add(position - (cols + 1));
+			buffer1[position - (cols + 1) + 1] = baseSplashForce;
+			SkipList.Add(position - (cols + 1) + 1);
+			buffer1[position - (cols + 1) - 1] = baseSplashForce;
+			SkipList.Add(position - (cols + 1) - 1);
+		}
 
         void processRipples(int[] source, int[] dest)
         {

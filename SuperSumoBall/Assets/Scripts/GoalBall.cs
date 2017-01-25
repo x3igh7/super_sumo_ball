@@ -20,6 +20,7 @@ namespace Assets.Scripts
         public Text Timer;
         public float TimeLeft; 
         public List<int> ScoreList = new List<int>();
+		
 
         private Rigidbody rb;
         private Vector3 startPosition; //save the starting position of the player

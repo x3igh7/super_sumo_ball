@@ -8,9 +8,9 @@ namespace Assets.Scripts
         //Apply input every frame as movement
         private Rigidbody rb;
         public float speed = 20;  //should show up in the inspector
-        public float jumpForce = 50; //should show up in the inspector
+        public float jumpForce = 60; //should show up in the inspector
         public float poundForce = 80; //should show up in the inspector
-        public float dashForce = 45;
+        public float dashForce = 35;
         public string jumpButton;
         public string horizontalButton;
         public string verticalButton;
