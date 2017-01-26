@@ -20,7 +20,7 @@ namespace Assets.Scripts
         public Text Timer;
         public float TimeLeft; 
         public List<int> ScoreList = new List<int>();
-		
+		public bool Slammin = true;
 
         private Rigidbody rb;
         private Vector3 startPosition; //save the starting position of the player
@@ -52,7 +52,10 @@ namespace Assets.Scripts
 
             rb = GetComponent<Rigidbody>();
             startPosition = GetComponent<Rigidbody>().position;
-            CurrentOwner = -1;
+			Vector3 vec = new Vector3();
+			vec.y -= 10;
+			rb.velocity = vec;
+			CurrentOwner = -1;
             UpdateLeaderboard();
         }
 
@@ -79,10 +82,14 @@ namespace Assets.Scripts
                     ScoreList[CurrentOwner] += 3;
                     CurrentOwner = -1;
                     UpdateLeaderboard();
-                }
-                rb.position = startPosition;
-                rb.velocity = new Vector3();
-            }
+				}
+				Slammin = true;
+				rb.position = startPosition;
+                Vector3 vec = new Vector3();
+				vec.y -= 10;
+				rb.velocity = vec;
+
+			}
         }
 
         public void UpdateTimer()

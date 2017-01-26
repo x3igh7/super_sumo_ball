@@ -16,8 +16,6 @@ namespace Assets.Scripts
         private float maxWaveHeight = 4.0f;
         private float MinimumCollisionMagnitude = 10.0f;
 
-        private int baseSplashForce = 500;
-
         private float forceMultiplier = 1;
         private bool swapMe = true;
 
@@ -89,10 +87,6 @@ namespace Assets.Scripts
                 int i = 0;
                 for (i = 0; i < currentBuffer.Length; i++)
                 {
-					if (SkipList.Contains(i))
-					{
-						//continue;
-					}
                     vertIndex = vertexIndices[i];
                     theseVertices[vertIndex] = vertices[vertIndex];
                     theseVertices[vertIndex].y += ((float)currentBuffer[i] / (forceMultiplier * 10)) * maxWaveHeight;
@@ -120,6 +114,7 @@ namespace Assets.Scripts
 
         void checkCollision(Collision collision)
         {
+			print("collided!");
             var contact = collision.contacts[0];
             RaycastHit hit;
             var origin = new Vector3(0f, 20f);
@@ -140,7 +135,72 @@ namespace Assets.Scripts
                     float column = (xCoord / xStep);
                     float row = (zCoord / zStep);
 
-                    splashAtPoint((int)column, (int)row);
+
+					var collisionMagnitude = collision.relativeVelocity.magnitude;
+
+					MonoBehaviour[] list = collision.gameObject.GetComponents<MonoBehaviour>();
+
+					foreach (MonoBehaviour mb in list)
+					{
+						if (mb is PlayerController)
+						{
+							if (Input.GetButton((mb as PlayerController).dashButton))
+							{
+								print("Relative veoocity: " + collision.relativeVelocity);
+								int position = (((int)row * (cols + 1)) + (int)column);
+
+								if (collision.relativeVelocity.x > 4)
+								{
+									//buffer1[position] = 0;
+									//buffer1[position - 1] = 0;
+									//buffer1[position + 1] = 0;
+									//buffer1[position + (cols + 1)] = 0;
+									//buffer1[position + (cols + 1) + 1] = 0;
+									//buffer1[position + (cols + 1) - 1] = 0;
+									//buffer1[position - (cols + 1)] = 0;
+									//buffer1[position - (cols + 1) + 1] = 0;
+									//buffer1[position - (cols + 1) - 1] = 0;
+								}
+								else if (collision.relativeVelocity.x < -4)
+								{
+									
+								}
+								else
+								{
+
+								}
+								if (collision.relativeVelocity.z > 4)
+								{
+									
+								}
+								else if(collision.relativeVelocity.z < -4)
+								{
+									
+								}
+								else
+								{
+
+								}
+
+								if ((mb as PlayerController).Slamming)
+								{
+									(mb as PlayerController).Slamming = false;
+								}
+								splashAtPoint((int)column, (int)row, 100);
+							}
+							else if ((mb as PlayerController).Slamming)
+							{
+								(mb as PlayerController).Slamming = false;
+								splashAtPoint((int)column, (int)row);
+							}
+						}
+						if(mb is GoalBall)
+						{
+							splashAtPoint((int)column, (int)row, 300);
+						}
+					}
+					
+
 					if (swapMe)
 					{
 						// process the ripples for this frame
@@ -156,32 +216,25 @@ namespace Assets.Scripts
 						processRipples(buffer2, buffer1);
 						processRipples(buffer1, buffer2);
 					}
+
+
 				}
             }
         }
 
-        void splashAtPoint(int x, int y)
+        void splashAtPoint(int x, int y, int force = 800)
         {
-            //var modifiedBaseSplash = Mathf.CeilToInt(baseSplashForce * forceMultiplier/32);
-            int position = ((y * (cols + 1)) + x);
-            buffer1[position] = baseSplashForce;
-			SkipList.Add(position);
-            buffer1[position - 1] = baseSplashForce;
-			SkipList.Add(position - 1);
-			buffer1[position + 1] = baseSplashForce;
-			SkipList.Add(position + 1);
-			buffer1[position + (cols + 1)] = baseSplashForce;
-			SkipList.Add(position + (cols + 1));
-			buffer1[position + (cols + 1) + 1] = baseSplashForce;
-			SkipList.Add(position + (cols + 1) + 1);
-			buffer1[position + (cols + 1) - 1] = baseSplashForce;
-			SkipList.Add(position + (cols + 1) - 1);
-			buffer1[position - (cols + 1)] = baseSplashForce;
-			SkipList.Add(position - (cols + 1));
-			buffer1[position - (cols + 1) + 1] = baseSplashForce;
-			SkipList.Add(position - (cols + 1) + 1);
-			buffer1[position - (cols + 1) - 1] = baseSplashForce;
-			SkipList.Add(position - (cols + 1) - 1);
+			//var modifiedBaseSplash = Mathf.CeilToInt(force * forceMultiplier/32);
+			int position = ((y * (cols + 1)) + x);
+            buffer1[position] += force;
+            buffer1[position - 1] += force;
+			buffer1[position + 1] += force;
+			buffer1[position + (cols + 1)] += force;
+			buffer1[position + (cols + 1) + 1] += force;
+			buffer1[position + (cols + 1) - 1] += force;
+			buffer1[position - (cols + 1)] += force;
+			buffer1[position - (cols + 1) + 1] += force;
+			buffer1[position - (cols + 1) - 1] += force;
 		}
 
         void processRipples(int[] source, int[] dest)

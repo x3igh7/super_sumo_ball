@@ -17,7 +17,8 @@ namespace Assets.Scripts
         public string dashButton;
         public int DefaultDashDuration = 10;
         public int DefaultDashCooldown = 25;
-        private int DashDuration;
+        public int DashDuration;
+		public bool Slamming;
         private int DashCooldown;
         private bool DashInCooldown = false;
         private AudioSource footSteps;
@@ -147,7 +148,7 @@ namespace Assets.Scripts
             var ray = new Ray(origin, Vector3.down);
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.gameObject.tag == "Surface" && hit.distance <= 1)
+                if (hit.collider.gameObject.tag == "Surface" && hit.distance <= 2)
                 {
                     PlayJumps();
                     rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -157,6 +158,7 @@ namespace Assets.Scripts
                     PlayGrunt();
                     rb.velocity = new Vector3();
                     rb.AddForce(Vector3.down * poundForce, ForceMode.Impulse);
+					Slamming = true;
                 }
             }
         }
